@@ -99,17 +99,20 @@
 
 
 
-  <meta name="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
-<meta property="og:type" content="website">
-<meta property="og:title" content="카테고리(categories)">
-<meta property="og:url" content="https://www.jslee.me/categories/index.html">
+  <meta name="description" content="개요운영체제 CentOS를 설치하는 방법을 정리한다.     버전2019/07/29 시점에서 최신 버전인 CentOS 7 1810 버전을 기준으로 설명한다.">
+<meta name="keywords" content="CentOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS 설치하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/02/install-centos/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+<meta property="og:description" content="개요운영체제 CentOS를 설치하는 방법을 정리한다.     버전2019/07/29 시점에서 최신 버전인 CentOS 7 1810 버전을 기준으로 설명한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-08-01T14:20:31.329Z">
+<meta property="og:image" content="https://www.jslee.me/2019/08/02/install-centos/centos_logo_45.png">
+<meta property="og:updated_time" content="2019-08-01T20:08:13.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="카테고리(categories)">
-<meta name="twitter:description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+<meta name="twitter:title" content="CentOS 설치하기">
+<meta name="twitter:description" content="개요운영체제 CentOS를 설치하는 방법을 정리한다.     버전2019/07/29 시점에서 최신 버전인 CentOS 7 1810 버전을 기준으로 설명한다.">
+<meta name="twitter:image" content="https://www.jslee.me/2019/08/02/install-centos/centos_logo_45.png">
 
 
 
@@ -117,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/categories/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/02/install-centos/">
 
 
 
@@ -127,7 +130,7 @@
   };
 </script>
 
-  <title>카테고리(categories) | jslee's blog</title>
+  <title>CentOS 설치하기 | jslee's blog</title>
   
 
 
@@ -276,7 +279,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -366,95 +369,265 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/02/install-centos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">카테고리(categories)
+        
+        
+          <h2 class="post-title" itemprop="name headline">CentOS 설치하기
 
-</h2>
+              
+            
+          </h2>
+        
 
-<div class="post-meta">
-  
-  
+        <div class="post-meta">
 
+          
+          
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
 
+              
+                
+              
+
+              <time title="Post created: 2019-08-02 04:43:35 / Updated at: 05:08:13" itemprop="dateCreated datePublished" datetime="2019-08-02T04:43:35+09:00">2019-08-02</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/02/install-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/02/install-centos/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>운영체제 CentOS를 설치하는 방법을 정리한다.</p>
+<div style="background-color: #212121">
+<img src="/2019/08/02/install-centos/centos_logo_45.png" title="CentOS Logo">
 </div>
 
-</header>
+<h3 id="버전"><a href="#버전" class="headerlink" title="버전"></a>버전</h3><p>2019/07/29 시점에서 최신 버전인 CentOS 7 1810 버전을 기준으로 설명한다.</p>
+<a id="more"></a>
 
-      
-      
-      
-      <div class="post-body">
-        
-        
-          <div class="category-all-page">
-            <div class="category-all-title">
-              
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              총 2개의 카테고리
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/시스템-구축/">시스템 구축</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/잡담/">잡담</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
-      
-      
+<h2 id="CentOS-다운로드"><a href="#CentOS-다운로드" class="headerlink" title="CentOS 다운로드"></a>CentOS 다운로드</h2><p><a href="https://www.centos.org/download/" target="_blank" rel="noopener">https://www.centos.org/download/</a></p>
+<p>위 경로에서 최신 버전의 CentOS DVD ISO 파일을 다운로드한다.</p>
+<h2 id="CentOS-설치-환경-구성"><a href="#CentOS-설치-환경-구성" class="headerlink" title="CentOS 설치 환경 구성"></a>CentOS 설치 환경 구성</h2><p>다음 중 하나의 방식으로 CentOS 설치 환경을 구성한다.</p>
+<ul>
+<li>로컬 컴퓨터에 VMware 등의 가상화 도구를 이용하여 가상 머신 생성</li>
+<li>직접 CentOS를 설치할 컴퓨터 준비<ul>
+<li>Rufus 등의 도구를 이용하여 CentOS 설치 USB 생성</li>
+</ul>
+</li>
+</ul>
+<h2 id="CentOS-설치"><a href="#CentOS-설치" class="headerlink" title="CentOS 설치"></a>CentOS 설치</h2><p>설치 이미지를 실행하여 가이드에 따라 한국어를 선택하여 설치를 진행한다.</p>
+<p>다음과 같이 설정하고 설치 시작 버튼을 클릭한다.</p>
+<ul>
+<li>설치 대상<ul>
+<li>자동 파티션 설정 선택</li>
+</ul>
+</li>
+<li>네트워크 및 호스트명<ul>
+<li>유선으로 … 연결되었습니다</li>
+</ul>
+</li>
+<li>그 외 기본값</li>
+</ul>
+<p>설치되는 동안 루트 계정의 암호를 설정하고 관리자 계정을 생성한다.</p>
+<p>설치가 완료될 때까지 대기한 후 안내에 따라 기기를 재시작한다.</p>
+<p>그러면 CentOS 설치가 완료된다.</p>
+<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="방화벽으로-인한-문제"><a href="#방화벽으로-인한-문제" class="headerlink" title="방화벽으로 인한 문제"></a>방화벽으로 인한 문제</h3><p>CentOS를 설치하면 기본적으로 방화벽 소프트웨어가 실행되고 있다.</p>
+<p>이로 인하여 사용자 설정으로 개방한 포트에 대하여 외부 접근이 불가능할 수 있다.</p>
+<p>이 때는 다음과 같이 방화벽에 원하는 서비스나 포트를 등록하여 문제를 해결할 수 있다.</p>
+<pre><code>sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-port=8080/tcp
+sudo firewall-cmd --reload
+sudo firewall-cmd --permanent --list-all</code></pre><h3 id="기본-소프트웨어-설치"><a href="#기본-소프트웨어-설치" class="headerlink" title="기본 소프트웨어 설치"></a>기본 소프트웨어 설치</h3><p>CentOS를 최소 설치를 선택하여 설치하면 설치 속도는 빨라지지만 시스템 관리 및 서비스 구동에 필요한 기본적인 소프트웨어도 설치되어 있지 않은 상태가 된다.</p>
+<p>다음 목록을 참고하여 기본 소프트웨어 설치를 위한 패키지를 설치할 수 있다.</p>
+<ul>
+<li>ifconfig<ul>
+<li>net-tools</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/01/start-blog/" rel="next" title="블로그 시작!">
+                <i class="fa fa-chevron-left"></i> 블로그 시작!
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -474,8 +647,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            목차
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            흝어보기
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,6 +781,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#버전"><span class="nav-number">1.1.</span> <span class="nav-text">버전</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-다운로드"><span class="nav-number">2.</span> <span class="nav-text">CentOS 다운로드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-설치-환경-구성"><span class="nav-number">3.</span> <span class="nav-text">CentOS 설치 환경 구성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-설치"><span class="nav-number">4.</span> <span class="nav-text">CentOS 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#추가로-확인할-사항"><span class="nav-number">5.</span> <span class="nav-text">추가로 확인할 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#방화벽으로-인한-문제"><span class="nav-number">5.1.</span> <span class="nav-text">방화벽으로 인한 문제</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#기본-소프트웨어-설치"><span class="nav-number">5.2.</span> <span class="nav-text">기본 소프트웨어 설치</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -764,9 +963,28 @@
 </script>
 
 
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://www.jslee.me/2019/08/02/install-centos/";
+    this.page.identifier = "2019/08/02/install-centos/";
+    this.page.title = 'CentOS 설치하기';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaeseoklee.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    window.addEventListener('load', loadComments, false);
+  
+</script>
 
 
 
+
+
+  
 
 
   
