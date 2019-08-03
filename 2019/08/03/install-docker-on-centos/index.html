@@ -99,17 +99,18 @@
 
 
 
-  <meta name="description" content="블로그를 또 다시 만들다 항상 만들고 방치해서 잊혀진 나의 블로그들이번에는 진짜 잘 해보자 ㅜㅜ  블로그를 만들었다. 잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…">
+  <meta name="description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y  Docker 설치다음 명령어로 yum을 이용하여 Docker를 설치한다. 1sudo yum install -y docker  다음 명령어로 Docker 서비스를 시">
+<meta name="keywords" content="CentOS,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="블로그 시작!">
-<meta property="og:url" content="https://www.jslee.me/2019/08/01/start-blog/index.html">
+<meta property="og:title" content="CentOS에 Docker 설치하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/03/install-docker-on-centos/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="블로그를 또 다시 만들다 항상 만들고 방치해서 잊혀진 나의 블로그들이번에는 진짜 잘 해보자 ㅜㅜ  블로그를 만들었다. 잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…">
+<meta property="og:description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y  Docker 설치다음 명령어로 yum을 이용하여 Docker를 설치한다. 1sudo yum install -y docker  다음 명령어로 Docker 서비스를 시">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-08-01T15:57:49.000Z">
+<meta property="og:updated_time" content="2019-08-03T04:38:09.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="블로그 시작!">
-<meta name="twitter:description" content="블로그를 또 다시 만들다 항상 만들고 방치해서 잊혀진 나의 블로그들이번에는 진짜 잘 해보자 ㅜㅜ  블로그를 만들었다. 잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…">
+<meta name="twitter:title" content="CentOS에 Docker 설치하기">
+<meta name="twitter:description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y  Docker 설치다음 명령어로 yum을 이용하여 Docker를 설치한다. 1sudo yum install -y docker  다음 명령어로 Docker 서비스를 시">
 
 
 
@@ -117,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/01/start-blog/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
 
 
 
@@ -127,7 +128,7 @@
   };
 </script>
 
-  <title>블로그 시작! | jslee's blog</title>
+  <title>CentOS에 Docker 설치하기 | jslee's blog</title>
   
 
 
@@ -386,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/01/start-blog/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -403,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">블로그 시작!
+          <h2 class="post-title" itemprop="name headline">CentOS에 Docker 설치하기
 
               
             
@@ -429,23 +430,13 @@
                 
               
 
-              <time title="Post created: 2019-08-01 23:37:51" itemprop="dateCreated datePublished" datetime="2019-08-01T23:37:51+09:00">2019-08-01</time>
+              <time title="Post created: 2019-08-03 13:26:42 / Updated at: 13:38:09" itemprop="dateCreated datePublished" datetime="2019-08-03T13:26:42+09:00">2019-08-03</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-08-02 00:57:49" itemprop="dateModified" datetime="2019-08-02T00:57:49+09:00">2019-08-02</time>
-              </span>
             
           
 
@@ -458,7 +449,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/잡담/" itemprop="url" rel="index"><span itemprop="name">잡담</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
 
                 
                 
@@ -476,8 +467,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/01/start-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/01/start-blog/" itemprop="commentCount"></span>
+                <a href="/2019/08/03/install-docker-on-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/install-docker-on-centos/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -508,39 +499,24 @@
       
 
       
-        <h2 id="블로그를-또-다시-만들다"><a href="#블로그를-또-다시-만들다" class="headerlink" title="블로그를 또 다시 만들다"></a>블로그를 또 다시 만들다</h2><blockquote>
-<p>항상 만들고 방치해서 잊혀진 나의 블로그들<br>이번에는 진짜 잘 해보자 ㅜㅜ</p>
-</blockquote>
-<p>블로그를 만들었다.</p>
-<p>잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와<br>“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…</p>
-<a id="more"></a>
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>CentOS에 Docker를 설치하는 방법을 정리한다.</p>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="Update-packages"><a href="#Update-packages" class="headerlink" title="Update packages"></a>Update packages</h3><p>다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update -y</span><br></pre></td></tr></table></figure>
 
-<p>사실 Notion을 알기 전에는 정보를 거의 오프라인에서만 기록했고<br>얼마 안 됐지만 그 후에는 Notion에 정리하고 있었기 때문에<br>블로그를 단순히 기록하는 곳이라고 생각하던 나는 그동안 블로그의 필요성을 전혀 느끼지 못했다.</p>
-<p>그런데 최근 GitHub에 관심이 생겨서 이것저것 찾아보던 중에<br>오래전에 흘려들었던 “GitHub Pages를 이용한 블로그 구축”에 대해 자세히 알게 되었다.</p>
-<p><strong>블로그 활동을 하는 것이 모두 GitHub에 커밋으로 남는다니..!</strong><br>1일 1포스트와 1일 1커밋을 동시에?!?! 라는 생각으로 블로그 만들기에 바로 착수했다.</p>
-<h3 id="Jekyll을-이용한-블로그-구축-시도"><a href="#Jekyll을-이용한-블로그-구축-시도" class="headerlink" title="Jekyll을 이용한 블로그 구축 시도"></a>Jekyll을 이용한 블로그 구축 시도</h3><p>처음에는 구글에 “GitHub 블로그”라고 검색해서 뜨는<br><a href="https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html" target="_blank" rel="noopener">쉽고 빠르게 수준 급의 GitHub 블로그 만들기</a> 같은 글을 보고<br>Jekyll과 minimal-mistakes 테마를 이용해서 블로그를 구성했다.</p>
-<p>근데 그 날 밤에 게임을 하다가 친구에게 조언을 받았다.</p>
-<blockquote>
-<p>친구: 아직도 Jekyll로 블로그 만드는 흑우가 있다?<br>나: GitHub 블로그는 다 Jekyll로 만드는 거 아니여?<br>친구: ;; 구글에 Hexo 검색 ㄱ</p>
-</blockquote>
-<p>Jekyll은 Ruby 기반인데 반해 Hexo는 Node.js 기반이었다.<br>나는 Ruby는 하나도 모르지만 Node.js는 조금 해봤기 때문에<br>그걸 알고있는 친구의 조언을 감사히 받아들여 Hexo로 다시 블로그를 구축하기 시작했다.</p>
-<h3 id="Hexo를-이용한-블로그-구축"><a href="#Hexo를-이용한-블로그-구축" class="headerlink" title="Hexo를 이용한 블로그 구축"></a>Hexo를 이용한 블로그 구축</h3><p><a href="https://hexo.io/ko/" target="_blank" rel="noopener">Hexo 공식 사이트</a>와 Hexo로 만들어진 믿음직한 블로그의 <a href="https://marv-0.github.io/2018/05/02/Hexo%20+%20Github%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20%EA%B5%AC%EC%B6%95/" target="_blank" rel="noopener">Hexo + Github 블로그 구축</a> 글을 참고해서<br>기본적인 틀과 Jenkins를 이용하여 자동으로 Deploy 하는 구조는 잘 만들었다.</p>
-<p>그런데 진짜 작업은 따로 있었으니… 바로 <strong>테마 적용 및 설정</strong>이었다.</p>
-<h4 id="Hexo에-NexT-테마-입히기"><a href="#Hexo에-NexT-테마-입히기" class="headerlink" title="Hexo에 NexT 테마 입히기"></a>Hexo에 NexT 테마 입히기</h4><p><a href="https://theme-next.org/" target="_blank" rel="noopener">NexT 테마 공식 사이트</a>를 참고하여 NexT 테마를 설치하고 설정하였다.<br>여기서는 한 줄로 정리할 수 있지만 이 작업에 거의 8시간은 쓴 것 같다.</p>
-<p>그래도 Disqus를 이용한 댓글 기능, Algolia를 이용한 검색 기능 등<br>사실상 Hexo와 NexT 테마에서 기본적으로 지원하는 기능들은 거의 다 쓸 수 있게 된 것 같아서 기분이 좋다.<br>이와 관련한 자세한 내용은 Hexo + NexT / Jenkin / GitHub Pages를 이용한 블로그 구축을 주제로<br>따로 정리를 해서 포스팅 할 예정이다.</p>
-<h2 id="앞으로-할-일"><a href="#앞으로-할-일" class="headerlink" title="앞으로 할 일"></a>앞으로 할 일</h2><ul>
-<li>마크다운 문법 다시 학습</li>
-<li>1일 1포스트 (1일 1커밋) 이상!<ul>
-<li>이전에 Notion 등에 정리했던 기록 중 공유할 만한 내용</li>
-<li>알고 있거나 새로 알게 된 정보 중 공유할 만한 내용</li>
-</ul>
-</li>
-<li>블로그 개인화<ul>
-<li>테마 부분 수정</li>
-<li>기능, 페이지 추가, 수정 등</li>
-</ul>
-</li>
-</ul>
+<h3 id="Docker-설치"><a href="#Docker-설치" class="headerlink" title="Docker 설치"></a>Docker 설치</h3><p>다음 명령어로 yum을 이용하여 Docker를 설치한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y docker</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 Docker 서비스를 시작한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 부팅 시 Docker 서비스를 자동으로 시작하도록 설정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="Insecure-Registry-등록"><a href="#Insecure-Registry-등록" class="headerlink" title="Insecure Registry 등록"></a>Insecure Registry 등록</h3><p>다음과 같이 Docker daemon 설정 파일을 수정하여 (없으면 생성) 다음과 같은 구문을 추가한다.</p>
+<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"insecure-registries"</span>: [<span class="string">"URL:PORT"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그 후 Docker 서비스를 재시작하면 해당 URL에 대하여 Insecure registry 오류가 발생하지 않는다.</p>
+<p>하지만 이 설정은 서버와 통신할 때 적절한 인증서 검증을 사용하지 않게 만들기 때문에 주의가 필요하다.</p>
 
       
     </div>
@@ -562,6 +538,17 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+        </div>
+      
 
       
       
@@ -571,8 +558,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/01/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/08/02/install-centos/" rel="next" title="CentOS 설치하기">
+                <i class="fa fa-chevron-left"></i> CentOS 설치하기
               </a>
             
           </div>
@@ -580,10 +567,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/02/install-centos/" rel="prev" title="CentOS 설치하기">
-                CentOS 설치하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -781,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#블로그를-또-다시-만들다"><span class="nav-number">1.</span> <span class="nav-text">블로그를 또 다시 만들다</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jekyll을-이용한-블로그-구축-시도"><span class="nav-number">1.1.</span> <span class="nav-text">Jekyll을 이용한 블로그 구축 시도</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo를-이용한-블로그-구축"><span class="nav-number">1.2.</span> <span class="nav-text">Hexo를 이용한 블로그 구축</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo에-NexT-테마-입히기"><span class="nav-number">1.2.1.</span> <span class="nav-text">Hexo에 NexT 테마 입히기</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#앞으로-할-일"><span class="nav-number">2.</span> <span class="nav-text">앞으로 할 일</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Update-packages"><span class="nav-number">2.1.</span> <span class="nav-text">Update packages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-설치"><span class="nav-number">2.2.</span> <span class="nav-text">Docker 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#추가로-확인할-사항"><span class="nav-number">3.</span> <span class="nav-text">추가로 확인할 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Insecure-Registry-등록"><span class="nav-number">3.1.</span> <span class="nav-text">Insecure Registry 등록</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -954,9 +937,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/01/start-blog/";
-    this.page.identifier = "2019/08/01/start-blog/";
-    this.page.title = '블로그 시작!';
+    this.page.url = "https://www.jslee.me/2019/08/03/install-docker-on-centos/";
+    this.page.identifier = "2019/08/03/install-docker-on-centos/";
+    this.page.title = 'CentOS에 Docker 설치하기';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');

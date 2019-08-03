@@ -386,6 +386,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/03/install-docker-on-centos/" class="post-title-link" itemprop="url">CentOS에 Docker 설치하기</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-03 13:26:42 / Updated at: 13:38:09" itemprop="dateCreated datePublished" datetime="2019-08-03T13:26:42+09:00">2019-08-03</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/03/install-docker-on-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/install-docker-on-centos/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>CentOS에 Docker를 설치하는 방법을 정리한다.</p>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="Update-packages"><a href="#Update-packages" class="headerlink" title="Update packages"></a>Update packages</h3><p>다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="Docker-설치"><a href="#Docker-설치" class="headerlink" title="Docker 설치"></a>Docker 설치</h3><p>다음 명령어로 yum을 이용하여 Docker를 설치한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y docker</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 Docker 서비스를 시작한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 부팅 시 Docker 서비스를 자동으로 시작하도록 설정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="Insecure-Registry-등록"><a href="#Insecure-Registry-등록" class="headerlink" title="Insecure Registry 등록"></a>Insecure Registry 등록</h3><p>다음과 같이 Docker daemon 설정 파일을 수정하여 (없으면 생성) 다음과 같은 구문을 추가한다.</p>
+<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"insecure-registries"</span>: [<span class="string">"URL:PORT"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그 후 Docker 서비스를 재시작하면 해당 URL에 대하여 Insecure registry 오류가 발생하지 않는다.</p>
+<p>하지만 이 설정은 서버와 통신할 때 적절한 인증서 검증을 사용하지 않게 만들기 때문에 주의가 필요하다.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/02/install-centos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -501,7 +691,7 @@
 
       
         
-          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/02/install-centos/centos_logo.png" width="200" height="200" title="CentOS Logo">
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2>
 
 <p>운영체제 CentOS를 설치하는 방법을 정리한다.</p>
 <h3 id="버전"><a href="#버전" class="headerlink" title="버전"></a>버전</h3><p>2019/07/29 시점에서 최신 버전인 CentOS 7 1810 버전을 기준으로 설명한다.</p>
@@ -970,7 +1160,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1010,7 +1200,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -1119,7 +1311,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.28</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.29</div>
 
 
         
