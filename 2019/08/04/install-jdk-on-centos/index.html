@@ -99,18 +99,18 @@
 
 
 
-  <meta name="description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y">
-<meta name="keywords" content="CentOS,Docker">
+  <meta name="description" content="개요CentOS 환경에 Java를 설치하는 방법을 정리한다. OpenJDKOpenJDK 버전2019년 07월 29일 기준으로 최신 버전인 build 12+32를 이용하여 설명한다. OpenJDK 다운로드http://jdk.java.net 위 사이트에서 JDK 최신 버전의 링크를 복사한다. 본 문서 작성일 기준으로 다음과 같았다. https://downloa">
+<meta name="keywords" content="CentOS,Java,JDK">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS에 Docker 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/03/install-docker-on-centos/index.html">
+<meta property="og:title" content="CentOS에 JDK 설치하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/04/install-jdk-on-centos/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y">
+<meta property="og:description" content="개요CentOS 환경에 Java를 설치하는 방법을 정리한다. OpenJDKOpenJDK 버전2019년 07월 29일 기준으로 최신 버전인 build 12+32를 이용하여 설명한다. OpenJDK 다운로드http://jdk.java.net 위 사이트에서 JDK 최신 버전의 링크를 복사한다. 본 문서 작성일 기준으로 다음과 같았다. https://downloa">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-08-03T05:11:53.507Z">
+<meta property="og:updated_time" content="2019-08-04T05:23:11.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS에 Docker 설치하기">
-<meta name="twitter:description" content="개요CentOS에 Docker를 설치하는 방법을 정리한다. 설치Update packages다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다. 1sudo yum update -y">
+<meta name="twitter:title" content="CentOS에 JDK 설치하기">
+<meta name="twitter:description" content="개요CentOS 환경에 Java를 설치하는 방법을 정리한다. OpenJDKOpenJDK 버전2019년 07월 29일 기준으로 최신 버전인 build 12+32를 이용하여 설명한다. OpenJDK 다운로드http://jdk.java.net 위 사이트에서 JDK 최신 버전의 링크를 복사한다. 본 문서 작성일 기준으로 다음과 같았다. https://downloa">
 
 
 
@@ -118,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/04/install-jdk-on-centos/">
 
 
 
@@ -128,7 +128,7 @@
   };
 </script>
 
-  <title>CentOS에 Docker 설치하기 | jslee's blog</title>
+  <title>CentOS에 JDK 설치하기 | jslee's blog</title>
   
 
 
@@ -387,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/04/install-jdk-on-centos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -404,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CentOS에 Docker 설치하기
+          <h2 class="post-title" itemprop="name headline">CentOS에 JDK 설치하기
 
               
             
@@ -430,7 +430,7 @@
                 
               
 
-              <time title="Post created: 2019-08-03 13:26:42 / Updated at: 14:11:53" itemprop="dateCreated datePublished" datetime="2019-08-03T13:26:42+09:00">2019-08-03</time>
+              <time title="Post created: 2019-08-04 13:33:35 / Updated at: 14:23:11" itemprop="dateCreated datePublished" datetime="2019-08-04T13:33:35+09:00">2019-08-04</time>
             </span>
           
 
@@ -467,8 +467,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/03/install-docker-on-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/install-docker-on-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/04/install-jdk-on-centos/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/04/install-jdk-on-centos/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -499,26 +499,52 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>CentOS에 Docker를 설치하는 방법을 정리한다.</p>
-<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="Update-packages"><a href="#Update-packages" class="headerlink" title="Update packages"></a>Update packages</h3><p>다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update -y</span><br></pre></td></tr></table></figure>
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>CentOS 환경에 Java를 설치하는 방법을 정리한다.</p>
+<h2 id="OpenJDK"><a href="#OpenJDK" class="headerlink" title="OpenJDK"></a>OpenJDK</h2><h3 id="OpenJDK-버전"><a href="#OpenJDK-버전" class="headerlink" title="OpenJDK 버전"></a>OpenJDK 버전</h3><p>2019년 07월 29일 기준으로 최신 버전인 build 12+32를 이용하여 설명한다.</p>
+<h3 id="OpenJDK-다운로드"><a href="#OpenJDK-다운로드" class="headerlink" title="OpenJDK 다운로드"></a>OpenJDK 다운로드</h3><p><a href="http://jdk.java.net/" target="_blank" rel="noopener">http://jdk.java.net</a></p>
+<p>위 사이트에서 JDK 최신 버전의 링크를 복사한다.</p>
+<p>본 문서 작성일 기준으로 다음과 같았다.</p>
+<p><a href="https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz" target="_blank" rel="noopener">https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz</a></p>
+<p>다음 명령어로 해당 JDK 압축 파일을 다운로드한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
+<h3 id="OpenJDK-설치"><a href="#OpenJDK-설치" class="headerlink" title="OpenJDK 설치"></a>OpenJDK 설치</h3><p>다음 명령어로 다운로드 한 압축 파일의 압축을 해제한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf openjdk-12+32_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h3 id="Docker-설치"><a href="#Docker-설치" class="headerlink" title="Docker 설치"></a>Docker 설치</h3><p>다음 명령어로 yum을 이용하여 Docker를 설치한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y docker</span><br></pre></td></tr></table></figure>
+<p>다음 명령어로 JDK 디렉토리를 이동하고 심볼릭 링크를 생성한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-12 /usr/<span class="built_in">local</span>/</span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">ln -sf jdk-12 java</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 Docker 서비스를 시작한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
+<p>사용 중인 쉘의 rc 파일의 가장 아래에 다음 구문을 추가한다. (.bashrc, .zshrc 등)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/java/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 부팅 시 Docker 서비스를 자동으로 시작하도록 설정한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+<p>다음 명령어로 사용 중인 쉘의 rc 파일을 적용한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
 
-<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="Insecure-Registry-등록"><a href="#Insecure-Registry-등록" class="headerlink" title="Insecure Registry 등록"></a>Insecure Registry 등록</h3><p>다음과 같이 Docker daemon 설정 파일을 수정하여 (없으면 생성) 다음과 같은 구문을 추가한다.</p>
-<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"insecure-registries"</span>: [<span class="string">"URL:PORT"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>다음 명령어로 Java와 컴파일러를 정상적으로 사용할 수 있는지 확인한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br><span class="line">javac --version</span><br></pre></td></tr></table></figure>
 
-<p>그 후 Docker 서비스를 재시작하면 해당 URL에 대하여 Insecure registry 오류가 발생하지 않는다.</p>
-<p>하지만 이 설정은 서버와 통신할 때 적절한 인증서 검증을 사용하지 않게 만들기 때문에 주의가 필요하다.</p>
+<h2 id="Oracle-JDK"><a href="#Oracle-JDK" class="headerlink" title="Oracle JDK"></a>Oracle JDK</h2><p>2018년 7월부터 Oracle JDK의 Java SE Subscription 라이센스 정책이 시행됨에 따라 상업용으로 이용하려면 라이센스 구독을 해야 한다.</p>
+<p>다만 Oracle JDK 1.8.202 버전 이하는 여전히 프로그램의 동작을 위한 목적에 한하여 무료로 사용 가능한 Binary Code License(BCL) 정책을 따른다.</p>
+<h3 id="Oracle-JDK-버전"><a href="#Oracle-JDK-버전" class="headerlink" title="Oracle JDK 버전"></a>Oracle JDK 버전</h3><p>개인용으로 사용할 것인지 상업용으로 사용할 것인지 등에 따라서 원하는 버전이 달라질 수 있다.</p>
+<p>필자는 개인적으로 사용할 예정이므로 2019년 08월 04일 기준으로 최신 버전인 12.0.2를 기준으로 설명한다.</p>
+<h3 id="Oracle-JDK-다운로드"><a href="#Oracle-JDK-다운로드" class="headerlink" title="Oracle JDK 다운로드"></a>Oracle JDK 다운로드</h3><p><a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">오라클 Java SE 다운로드 페이지</a>에 접속하여 원하는 버전을 다운로드한다.</p>
+<p>오라클 웹 페이지에서는 접속하는 클라이언트가 쿠키 정책에 동의해야만 이후 작업을 처리해 주기 때문에 wget으로 간단하게 다운로드 하기 어렵다.</p>
+<p>그래서 그냥 로컬 컴퓨터로 다운로드 하고 설치하려는 서버에 직접 옮기는 게 편하다.</p>
+<h3 id="Oracle-JDK-설치"><a href="#Oracle-JDK-설치" class="headerlink" title="Oracle JDK 설치"></a>Oracle JDK 설치</h3><p>다음 명령어로 다운로드 한 압축 파일의 압축을 해제한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf jdk-12.0.2_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 JDK 디렉토리를 이동하고 심볼릭 링크를 생성한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-12.0.2 /usr/<span class="built_in">local</span>/</span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">ln -sf jdk-12.0.2 java</span><br></pre></td></tr></table></figure>
+
+<p>사용 중인 쉘의 rc 파일의 가장 아래에 다음 구문을 추가한다. (.bashrc, .zshrc 등)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/java/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 사용 중인 쉘의 rc 파일을 적용한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어로 Java와 컴파일러를 정상적으로 사용할 수 있는지 확인한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br><span class="line">javac --version</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -547,7 +573,9 @@
           
             <a href="/tags/CentOS/" rel="tag"># CentOS</a>
           
-            <a href="/tags/Docker/" rel="tag"># Docker</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/JDK/" rel="tag"># JDK</a>
           
         </div>
       
@@ -560,8 +588,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/install-centos/" rel="next" title="CentOS 설치하기">
-                <i class="fa fa-chevron-left"></i> CentOS 설치하기
+              <a href="/2019/08/03/install-docker-on-centos/" rel="next" title="CentOS에 Docker 설치하기">
+                <i class="fa fa-chevron-left"></i> CentOS에 Docker 설치하기
               </a>
             
           </div>
@@ -569,10 +597,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/04/install-jdk-on-centos/" rel="prev" title="CentOS에 JDK 설치하기">
-                CentOS에 JDK 설치하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -774,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Update-packages"><span class="nav-number">2.1.</span> <span class="nav-text">Update packages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-설치"><span class="nav-number">2.2.</span> <span class="nav-text">Docker 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#추가로-확인할-사항"><span class="nav-number">3.</span> <span class="nav-text">추가로 확인할 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Insecure-Registry-등록"><span class="nav-number">3.1.</span> <span class="nav-text">Insecure Registry 등록</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenJDK"><span class="nav-number">2.</span> <span class="nav-text">OpenJDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-버전"><span class="nav-number">2.1.</span> <span class="nav-text">OpenJDK 버전</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-다운로드"><span class="nav-number">2.2.</span> <span class="nav-text">OpenJDK 다운로드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-설치"><span class="nav-number">2.3.</span> <span class="nav-text">OpenJDK 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle-JDK"><span class="nav-number">3.</span> <span class="nav-text">Oracle JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-버전"><span class="nav-number">3.1.</span> <span class="nav-text">Oracle JDK 버전</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-다운로드"><span class="nav-number">3.2.</span> <span class="nav-text">Oracle JDK 다운로드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-설치"><span class="nav-number">3.3.</span> <span class="nav-text">Oracle JDK 설치</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -947,9 +971,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/03/install-docker-on-centos/";
-    this.page.identifier = "2019/08/03/install-docker-on-centos/";
-    this.page.title = 'CentOS에 Docker 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/04/install-jdk-on-centos/";
+    this.page.identifier = "2019/08/04/install-jdk-on-centos/";
+    this.page.title = 'CentOS에 JDK 설치하기';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
