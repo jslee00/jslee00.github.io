@@ -99,20 +99,20 @@
 
 
 
-  <meta name="description" content="개요  CentOS 환경에 Java를 설치하는 방법을 정리한다.">
-<meta name="keywords" content="CentOS,Java,JDK">
+  <meta name="description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
+<meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS에 JDK 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/04/install-jdk-on-centos/index.html">
+<meta property="og:title" content="Node.js 설치하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/06/install-nodejs/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  CentOS 환경에 Java를 설치하는 방법을 정리한다.">
+<meta property="og:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/04/install-jdk-on-centos/java-jdk-logo.jpg">
-<meta property="og:updated_time" content="2019-08-04T06:16:12.078Z">
+<meta property="og:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
+<meta property="og:updated_time" content="2019-08-06T05:08:11.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS에 JDK 설치하기">
-<meta name="twitter:description" content="개요  CentOS 환경에 Java를 설치하는 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/04/install-jdk-on-centos/java-jdk-logo.jpg">
+<meta name="twitter:title" content="Node.js 설치하기">
+<meta name="twitter:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
+<meta name="twitter:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/04/install-jdk-on-centos/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/06/install-nodejs/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>CentOS에 JDK 설치하기 | jslee's blog</title>
+  <title>Node.js 설치하기 | jslee's blog</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/04/install-jdk-on-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/06/install-nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CentOS에 JDK 설치하기
+          <h2 class="post-title" itemprop="name headline">Node.js 설치하기
 
               
             
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="Post created: 2019-08-04 13:33:35 / Updated at: 15:16:12" itemprop="dateCreated datePublished" datetime="2019-08-04T13:33:35+09:00">2019-08-04</time>
+              <time title="Post created: 2019-08-06 20:21:42 / Updated at: 14:08:11" itemprop="dateCreated datePublished" datetime="2019-08-06T20:21:42+09:00">2019-08-06</time>
             </span>
           
 
@@ -469,8 +469,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/04/install-jdk-on-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/04/install-jdk-on-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/06/install-nodejs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/06/install-nodejs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,55 +501,24 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/04/install-jdk-on-centos/java-jdk-logo.jpg" width="300">
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/06/install-nodejs/nodejs-logo.svg" width="250">
 
-<p>CentOS 환경에 Java를 설치하는 방법을 정리한다.</p>
+<p><a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nodesource/distributions/blob/master/README.md</a></p>
+<p>위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.</p>
 <a id="more"></a>
 
-<h2 id="OpenJDK"><a href="#OpenJDK" class="headerlink" title="OpenJDK"></a>OpenJDK</h2><h3 id="OpenJDK-버전"><a href="#OpenJDK-버전" class="headerlink" title="OpenJDK 버전"></a>OpenJDK 버전</h3><p>2019년 07월 29일 기준으로 최신 버전인 build 12+32를 이용하여 설명한다.</p>
-<h3 id="OpenJDK-다운로드"><a href="#OpenJDK-다운로드" class="headerlink" title="OpenJDK 다운로드"></a>OpenJDK 다운로드</h3><p><a href="http://jdk.java.net/" target="_blank" rel="noopener">http://jdk.java.net</a></p>
-<p>위 사이트에서 JDK 최신 버전의 링크를 복사한다.</p>
-<p>본 문서 작성일 기준으로 다음과 같았다.</p>
-<p><a href="https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz" target="_blank" rel="noopener">https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz</a></p>
-<p>다음 명령어로 해당 JDK 압축 파일을 다운로드한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.java.net/openjdk/jdk12/ri/openjdk-12+32_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>다음 명령어를 이용하여 각 환경에서 Node.js를 설치할 수 있다.</p>
+<h3 id="Ubuntu-또는-Debian-기반"><a href="#Ubuntu-또는-Debian-기반" class="headerlink" title="Ubuntu 또는 Debian 기반"></a>Ubuntu 또는 Debian 기반</h3><h4 id="U-D-기반-Node-js-v12-x-설치"><a href="#U-D-기반-Node-js-v12-x-설치" class="headerlink" title="U/D 기반 Node.js v12.x 설치"></a>U/D 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
 
-<h3 id="OpenJDK-설치"><a href="#OpenJDK-설치" class="headerlink" title="OpenJDK 설치"></a>OpenJDK 설치</h3><p>다음 명령어로 다운로드 한 압축 파일의 압축을 해제한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf openjdk-12+32_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+<h4 id="U-D-기반-Node-js-v11-x-설치"><a href="#U-D-기반-Node-js-v11-x-설치" class="headerlink" title="U/D 기반 Node.js v11.x 설치"></a>U/D 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 JDK 디렉토리를 이동하고 심볼릭 링크를 생성한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-12 /usr/<span class="built_in">local</span>/</span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">ln -sf jdk-12 java</span><br></pre></td></tr></table></figure>
+<h4 id="U-D-기반-Node-js-v10-x-설치"><a href="#U-D-기반-Node-js-v10-x-설치" class="headerlink" title="U/D 기반 Node.js v10.x 설치"></a>U/D 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
 
-<p>사용 중인 쉘의 rc 파일의 가장 아래에 다음 구문을 추가한다. (.bashrc, .zshrc 등)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/java/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
+<h3 id="Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><a href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등" class="headerlink" title="Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)"></a>Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</h3><h4 id="EL-기반-Node-js-v12-x-설치"><a href="#EL-기반-Node-js-v12-x-설치" class="headerlink" title="EL 기반 Node.js v12.x 설치"></a>EL 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_12.x | bash -</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 사용 중인 쉘의 rc 파일을 적용한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h4 id="EL-기반-Node-js-v11-x-설치"><a href="#EL-기반-Node-js-v11-x-설치" class="headerlink" title="EL 기반 Node.js v11.x 설치"></a>EL 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_11.x | bash -</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 Java와 컴파일러를 정상적으로 사용할 수 있는지 확인한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br><span class="line">javac --version</span><br></pre></td></tr></table></figure>
-
-<h2 id="Oracle-JDK"><a href="#Oracle-JDK" class="headerlink" title="Oracle JDK"></a>Oracle JDK</h2><p>2018년 7월부터 Oracle JDK의 Java SE Subscription 라이센스 정책이 시행됨에 따라 상업용으로 이용하려면 라이센스 구독을 해야 한다.</p>
-<p>다만 Oracle JDK 1.8.202 버전 이하는 여전히 프로그램의 동작을 위한 목적에 한하여 무료로 사용 가능한 Binary Code License(BCL) 정책을 따른다.</p>
-<h3 id="Oracle-JDK-버전"><a href="#Oracle-JDK-버전" class="headerlink" title="Oracle JDK 버전"></a>Oracle JDK 버전</h3><p>개인용으로 사용할 것인지 상업용으로 사용할 것인지 등에 따라서 원하는 버전이 달라질 수 있다.</p>
-<p>필자는 개인적으로 사용할 예정이므로 2019년 08월 04일 기준으로 최신 버전인 12.0.2를 기준으로 설명한다.</p>
-<h3 id="Oracle-JDK-다운로드"><a href="#Oracle-JDK-다운로드" class="headerlink" title="Oracle JDK 다운로드"></a>Oracle JDK 다운로드</h3><p><a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">오라클 Java SE 다운로드 페이지</a>에 접속하여 원하는 버전을 다운로드한다.</p>
-<p>오라클 웹 페이지에서는 접속하는 클라이언트가 쿠키 정책에 동의해야만 이후 작업을 처리해 주기 때문에 wget으로 간단하게 다운로드 하기 어렵다.</p>
-<p>그래서 그냥 로컬 컴퓨터로 다운로드 하고 설치하려는 서버에 직접 옮기는 게 편하다.</p>
-<h3 id="Oracle-JDK-설치"><a href="#Oracle-JDK-설치" class="headerlink" title="Oracle JDK 설치"></a>Oracle JDK 설치</h3><p>다음 명령어로 다운로드 한 압축 파일의 압축을 해제한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf jdk-12.0.2_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어로 JDK 디렉토리를 이동하고 심볼릭 링크를 생성한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv jdk-12.0.2 /usr/<span class="built_in">local</span>/</span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span></span><br><span class="line">ln -sf jdk-12.0.2 java</span><br></pre></td></tr></table></figure>
-
-<p>사용 중인 쉘의 rc 파일의 가장 아래에 다음 구문을 추가한다. (.bashrc, .zshrc 등)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/java/bin</span><br><span class="line"><span class="built_in">export</span> PATH</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어로 사용 중인 쉘의 rc 파일을 적용한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어로 Java와 컴파일러를 정상적으로 사용할 수 있는지 확인한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br><span class="line">javac --version</span><br></pre></td></tr></table></figure>
+<h4 id="EL-기반-Node-js-v10-x-설치"><a href="#EL-기반-Node-js-v10-x-설치" class="headerlink" title="EL 기반 Node.js v10.x 설치"></a>EL 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br></pre></td></tr></table></figure>
 
 
       
@@ -577,11 +546,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
-          
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-            <a href="/tags/JDK/" rel="tag"># JDK</a>
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
           
         </div>
       
@@ -594,8 +559,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/03/install-docker-on-centos/" rel="next" title="CentOS에 Docker 설치하기">
-                <i class="fa fa-chevron-left"></i> CentOS에 Docker 설치하기
+              <a href="/2019/08/05/run-kafka-with-docker/" rel="next" title="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
+                <i class="fa fa-chevron-left"></i> Docker를 이용하여 Zookeeper와 Kafka 실행하기
               </a>
             
           </div>
@@ -603,10 +568,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/05/run-kafka-with-docker/" rel="prev" title="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
-                Docker를 이용하여 Zookeeper와 Kafka 실행하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -814,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenJDK"><span class="nav-number">2.</span> <span class="nav-text">OpenJDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-버전"><span class="nav-number">2.1.</span> <span class="nav-text">OpenJDK 버전</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-다운로드"><span class="nav-number">2.2.</span> <span class="nav-text">OpenJDK 다운로드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenJDK-설치"><span class="nav-number">2.3.</span> <span class="nav-text">OpenJDK 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Oracle-JDK"><span class="nav-number">3.</span> <span class="nav-text">Oracle JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-버전"><span class="nav-number">3.1.</span> <span class="nav-text">Oracle JDK 버전</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-다운로드"><span class="nav-number">3.2.</span> <span class="nav-text">Oracle JDK 다운로드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-JDK-설치"><span class="nav-number">3.3.</span> <span class="nav-text">Oracle JDK 설치</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-또는-Debian-기반"><span class="nav-number">2.1.</span> <span class="nav-text">Ubuntu 또는 Debian 기반</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v12-x-설치"><span class="nav-number">2.1.1.</span> <span class="nav-text">U/D 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v11-x-설치"><span class="nav-number">2.1.2.</span> <span class="nav-text">U/D 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v10-x-설치"><span class="nav-number">2.1.3.</span> <span class="nav-text">U/D 기반 Node.js v10.x 설치</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><span class="nav-number">2.2.</span> <span class="nav-text">Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v12-x-설치"><span class="nav-number">2.2.1.</span> <span class="nav-text">EL 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v11-x-설치"><span class="nav-number">2.2.2.</span> <span class="nav-text">EL 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v10-x-설치"><span class="nav-number">2.2.3.</span> <span class="nav-text">EL 기반 Node.js v10.x 설치</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -987,9 +948,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/04/install-jdk-on-centos/";
-    this.page.identifier = "2019/08/04/install-jdk-on-centos/";
-    this.page.title = 'CentOS에 JDK 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/06/install-nodejs/";
+    this.page.identifier = "2019/08/06/install-nodejs/";
+    this.page.title = 'Node.js 설치하기';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
