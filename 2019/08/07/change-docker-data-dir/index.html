@@ -99,20 +99,18 @@
 
 
 
-  <meta name="description" content="개요  CentOS에 Docker를 설치하는 방법을 정리한다.">
-<meta name="keywords" content="CentOS,Docker">
+  <meta name="description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
+<meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS에 Docker 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/03/install-docker-on-centos/index.html">
+<meta property="og:title" content="Docker 데이터 디렉토리 변경">
+<meta property="og:url" content="https://www.jslee.me/2019/08/07/change-docker-data-dir/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  CentOS에 Docker를 설치하는 방법을 정리한다.">
+<meta property="og:description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/03/install-docker-on-centos/docker-logo.png">
-<meta property="og:updated_time" content="2019-08-04T06:16:12.077Z">
+<meta property="og:updated_time" content="2019-08-07T12:08:09.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS에 Docker 설치하기">
-<meta name="twitter:description" content="개요  CentOS에 Docker를 설치하는 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/03/install-docker-on-centos/docker-logo.png">
+<meta name="twitter:title" content="Docker 데이터 디렉토리 변경">
+<meta name="twitter:description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
 
 
 
@@ -120,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/07/change-docker-data-dir/">
 
 
 
@@ -130,7 +128,7 @@
   };
 </script>
 
-  <title>CentOS에 Docker 설치하기 | jslee's blog</title>
+  <title>Docker 데이터 디렉토리 변경 | jslee's blog</title>
   
 
 
@@ -389,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/07/change-docker-data-dir/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CentOS에 Docker 설치하기
+          <h2 class="post-title" itemprop="name headline">Docker 데이터 디렉토리 변경
 
               
             
@@ -432,23 +430,13 @@
                 
               
 
-              <time title="Post created: 2019-08-03 13:26:42" itemprop="dateCreated datePublished" datetime="2019-08-03T13:26:42+09:00">2019-08-03</time>
+              <time title="Post created: 2019-08-07 20:58:33 / Updated at: 21:08:09" itemprop="dateCreated datePublished" datetime="2019-08-07T20:58:33+09:00">2019-08-07</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-08-04 15:16:12" itemprop="dateModified" datetime="2019-08-04T15:16:12+09:00">2019-08-04</time>
-              </span>
             
           
 
@@ -479,8 +467,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/03/install-docker-on-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/install-docker-on-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/07/change-docker-data-dir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/07/change-docker-data-dir/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -511,28 +499,39 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/03/install-docker-on-centos/docker-logo.png" width="250">
-
-<p>CentOS에 Docker를 설치하는 방법을 정리한다.</p>
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>Docker는 기본적으로 <code>/var/lib/docker</code> 디렉토리에 Docker Image 등의 데이터를 저장한다.<br>이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.</p>
+<p>따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.<br>이 페이지에서는 <code>/home/docker</code> 디렉토리로 변경한다.</p>
 <a id="more"></a>
 
-<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><h3 id="Update-packages"><a href="#Update-packages" class="headerlink" title="Update packages"></a>Update packages</h3><p>다음 명령어로 yum으로 설치된 모든 패키지의 업데이트를 진행한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update -y</span><br></pre></td></tr></table></figure>
+<h2 id="방법"><a href="#방법" class="headerlink" title="방법"></a>방법</h2><h3 id="Ubuntu-Debian-Docker-데이터-디렉토리-변경"><a href="#Ubuntu-Debian-Docker-데이터-디렉토리-변경" class="headerlink" title="Ubuntu/Debian Docker 데이터 디렉토리 변경"></a>Ubuntu/Debian Docker 데이터 디렉토리 변경</h3><p>먼저 다음 명령어를 이용하여 실행 중인 Docker 프로세스를 중지한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker stop</span><br></pre></td></tr></table></figure>
 
-<h3 id="Docker-설치"><a href="#Docker-설치" class="headerlink" title="Docker 설치"></a>Docker 설치</h3><p>다음 명령어로 yum을 이용하여 Docker를 설치한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y docker</span><br></pre></td></tr></table></figure>
+<p><code>/etc/default/docker</code> 파일을 다음과 같이 수정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DOCKER_OPTS=<span class="string">"-g /home/docker"</span></span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 Docker 서비스를 시작한다.</p>
+<p>기존 자료를 다음 명령어로 이동한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker/* /home/docker/</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 Docker 프로세스를 실행한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
+
+<h3 id="CentOS-Docker-데이터-디렉토리-변경"><a href="#CentOS-Docker-데이터-디렉토리-변경" class="headerlink" title="CentOS Docker 데이터 디렉토리 변경"></a>CentOS Docker 데이터 디렉토리 변경</h3><p>먼저 다음 명령어를 이용하여 실행 중인 Docker 프로세스를 중지한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop docker</span><br></pre></td></tr></table></figure>
+
+<p><code>/usr/lib/systemd/system/docker.service</code> 파일을 다음과 같이 수정한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line"># the default is not to use systemd for cgroups because the delegate issues still</span><br><span class="line"># exists and systemd currently does not support the cgroup feature set required</span><br><span class="line"># for containers run by docker</span><br><span class="line">ExecStart=/usr/bin/dockerd -g /home/docker</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line"># Having non-zero Limit*s causes performance problems due to accounting overhead</span><br><span class="line"># in the kernel. We recommend using cgroups to do container-local accounting.</span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">LimitCORE=infinity</span><br><span class="line"># Uncomment TasksMax if your systemd version supports it.</span><br><span class="line"># Only systemd 226 and above support this version.</span><br><span class="line">#TasksMax=infinity</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line"># set delegate yes so that systemd does not reset the cgroups of docker containers</span><br><span class="line">Delegate=yes</span><br><span class="line"># kill only the docker process, not all processes in the cgroup</span><br><span class="line">KillMode=process</span><br><span class="line"># restart the docker process if it exits prematurely</span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+<p>ExecStart 부분의 맨 끝에 -g /home/docker 를 추가하였다.</p>
+<p>기존 자료를 다음 명령어로 이동한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker/* /home/docker/</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 Docker 프로세스를 실행한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어로 부팅 시 Docker 서비스를 자동으로 시작하도록 설정한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
-
-<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="Insecure-Registry-등록"><a href="#Insecure-Registry-등록" class="headerlink" title="Insecure Registry 등록"></a>Insecure Registry 등록</h3><p>다음과 같이 Docker daemon 설정 파일을 수정하여 (없으면 생성) 다음과 같은 구문을 추가한다.</p>
-<figure class="highlight json"><figcaption><span>/etc/docker/daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"insecure-registries"</span>: [<span class="string">"URL:PORT"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그 후 Docker 서비스를 재시작하면 해당 URL에 대하여 Insecure registry 오류가 발생하지 않는다.</p>
-<p>하지만 이 설정은 서버와 통신할 때 적절한 인증서 검증을 사용하지 않게 만들기 때문에 주의가 필요하다.</p>
+<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
+<li><a href="http://dveamer.github.io/backend/DockerImageDirectory.html" target="_blank" rel="noopener">Docker 설치 후 이미지 보관 디렉토리 변경</a></li>
+<li><a href="https://stackoverflow.com/questions/26166550/set-docker-opts-in-centos" target="_blank" rel="noopener">Set Docker_Opts in centos</a></li>
+</ul>
 
       
     </div>
@@ -559,8 +558,6 @@
         
         <div class="post-tags">
           
-            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
-          
             <a href="/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
@@ -574,8 +571,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/02/install-centos/" rel="next" title="CentOS 설치하기">
-                <i class="fa fa-chevron-left"></i> CentOS 설치하기
+              <a href="/2019/08/06/install-nodejs/" rel="next" title="Node.js 설치하기">
+                <i class="fa fa-chevron-left"></i> Node.js 설치하기
               </a>
             
           </div>
@@ -583,10 +580,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/04/install-jdk-on-centos/" rel="prev" title="CentOS에 JDK 설치하기">
-                CentOS에 JDK 설치하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -794,7 +787,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Update-packages"><span class="nav-number">2.1.</span> <span class="nav-text">Update packages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-설치"><span class="nav-number">2.2.</span> <span class="nav-text">Docker 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#추가로-확인할-사항"><span class="nav-number">3.</span> <span class="nav-text">추가로 확인할 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Insecure-Registry-등록"><span class="nav-number">3.1.</span> <span class="nav-text">Insecure Registry 등록</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#방법"><span class="nav-number">2.</span> <span class="nav-text">방법</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-Debian-Docker-데이터-디렉토리-변경"><span class="nav-number">2.1.</span> <span class="nav-text">Ubuntu/Debian Docker 데이터 디렉토리 변경</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS-Docker-데이터-디렉토리-변경"><span class="nav-number">2.2.</span> <span class="nav-text">CentOS Docker 데이터 디렉토리 변경</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고자료"><span class="nav-number">3.</span> <span class="nav-text">참고자료</span></a></li></ol></div>
             
 
           </div>
@@ -967,9 +960,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/03/install-docker-on-centos/";
-    this.page.identifier = "2019/08/03/install-docker-on-centos/";
-    this.page.title = 'CentOS에 Docker 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/07/change-docker-data-dir/";
+    this.page.identifier = "2019/08/07/change-docker-data-dir/";
+    this.page.title = 'Docker 데이터 디렉토리 변경';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');

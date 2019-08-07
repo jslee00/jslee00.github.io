@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://www.jslee.me/"/>
-  <updated>2019-08-06T05:08:11.231Z</updated>
+  <updated>2019-08-07T12:08:09.203Z</updated>
   <id>https://www.jslee.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker 데이터 디렉토리 변경</title>
+    <link href="https://www.jslee.me/2019/08/07/change-docker-data-dir/"/>
+    <id>https://www.jslee.me/2019/08/07/change-docker-data-dir/</id>
+    <published>2019-08-07T11:58:33.000Z</published>
+    <updated>2019-08-07T12:08:09.203Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>Docker는 기본적으로 <code>/var/lib/docker</code> 디렉토리에 Docker Image 등의 데이터를 저장한다.<br>이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.</p><p>따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.<br>이 페이지에서는 <code>/home/docker</code> 디렉토리로 변경한다.</p><a id="more"></a><h2 id="방법"><a href="#방법" class="headerlink" title="방법"></a>방법</h2><h3 id="Ubuntu-Debian-Docker-데이터-디렉토리-변경"><a href="#Ubuntu-Debian-Docker-데이터-디렉토리-변경" class="headerlink" title="Ubuntu/Debian Docker 데이터 디렉토리 변경"></a>Ubuntu/Debian Docker 데이터 디렉토리 변경</h3><p>먼저 다음 명령어를 이용하여 실행 중인 Docker 프로세스를 중지한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker stop</span><br></pre></td></tr></table></figure><p><code>/etc/default/docker</code> 파일을 다음과 같이 수정한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DOCKER_OPTS=<span class="string">"-g /home/docker"</span></span><br></pre></td></tr></table></figure><p>기존 자료를 다음 명령어로 이동한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker/* /home/docker/</span><br></pre></td></tr></table></figure><p>다음 명령어를 이용하여 Docker 프로세스를 실행한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure><h3 id="CentOS-Docker-데이터-디렉토리-변경"><a href="#CentOS-Docker-데이터-디렉토리-변경" class="headerlink" title="CentOS Docker 데이터 디렉토리 변경"></a>CentOS Docker 데이터 디렉토리 변경</h3><p>먼저 다음 명령어를 이용하여 실행 중인 Docker 프로세스를 중지한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop docker</span><br></pre></td></tr></table></figure><p><code>/usr/lib/systemd/system/docker.service</code> 파일을 다음과 같이 수정한다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line"># the default is not to use systemd for cgroups because the delegate issues still</span><br><span class="line"># exists and systemd currently does not support the cgroup feature set required</span><br><span class="line"># for containers run by docker</span><br><span class="line">ExecStart=/usr/bin/dockerd -g /home/docker</span><br><span class="line">ExecReload=/bin/kill -s HUP $MAINPID</span><br><span class="line"># Having non-zero Limit*s causes performance problems due to accounting overhead</span><br><span class="line"># in the kernel. We recommend using cgroups to do container-local accounting.</span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">LimitCORE=infinity</span><br><span class="line"># Uncomment TasksMax if your systemd version supports it.</span><br><span class="line"># Only systemd 226 and above support this version.</span><br><span class="line">#TasksMax=infinity</span><br><span class="line">TimeoutStartSec=0</span><br><span class="line"># set delegate yes so that systemd does not reset the cgroups of docker containers</span><br><span class="line">Delegate=yes</span><br><span class="line"># kill only the docker process, not all processes in the cgroup</span><br><span class="line">KillMode=process</span><br><span class="line"># restart the docker process if it exits prematurely</span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure><p>ExecStart 부분의 맨 끝에 -g /home/docker 를 추가하였다.</p><p>기존 자료를 다음 명령어로 이동한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker/* /home/docker/</span><br></pre></td></tr></table></figure><p>다음 명령어를 이용하여 Docker 프로세스를 실행한다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure><h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul><li><a href="http://dveamer.github.io/backend/DockerImageDirectory.html" target="_blank" rel="noopener">Docker 설치 후 이미지 보관 디렉토리 변경</a></li><li><a href="https://stackoverflow.com/questions/26166550/set-docker-opts-in-centos" target="_blank" rel="noopener">Set Docker_Opts in centos</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h2&gt;&lt;p&gt;Docker는 기본적으로 &lt;code&gt;/var/lib/docker&lt;/code&gt; 디렉토리에 Docker Image 등의 데이터를 저장한다.&lt;br&gt;이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.&lt;/p&gt;
+&lt;p&gt;따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.&lt;br&gt;이 페이지에서는 &lt;code&gt;/home/docker&lt;/code&gt; 디렉토리로 변경한다.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="시스템 구축" scheme="https://www.jslee.me/categories/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95/"/>
+    
+    
+      <category term="Docker" scheme="https://www.jslee.me/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Node.js 설치하기</title>
@@ -117,9 +140,9 @@
       <category term="시스템 구축" scheme="https://www.jslee.me/categories/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95/"/>
     
     
-      <category term="Docker" scheme="https://www.jslee.me/tags/Docker/"/>
-    
       <category term="CentOS" scheme="https://www.jslee.me/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="https://www.jslee.me/tags/Docker/"/>
     
   </entry>
   
