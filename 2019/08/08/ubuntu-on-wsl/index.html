@@ -99,20 +99,20 @@
 
 
 
-  <meta name="description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
-<meta name="keywords" content="Node.js">
+  <meta name="description" content="개요  Windows Subsystem for Linux 환경을 이용하여 Windows를 사용하며 Ubuntu도 사용하는 방법을 정리한다.">
+<meta name="keywords" content="WSL,Ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/06/install-nodejs/index.html">
+<meta property="og:title" content="WSL 환경에 Ubuntu 설정하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
+<meta property="og:description" content="개요  Windows Subsystem for Linux 환경을 이용하여 Windows를 사용하며 Ubuntu도 사용하는 방법을 정리한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
-<meta property="og:updated_time" content="2019-08-06T05:08:11.231Z">
+<meta property="og:image" content="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/wsl-logo.png">
+<meta property="og:updated_time" content="2019-08-08T03:38:10.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js 설치하기">
-<meta name="twitter:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
+<meta name="twitter:title" content="WSL 환경에 Ubuntu 설정하기">
+<meta name="twitter:description" content="개요  Windows Subsystem for Linux 환경을 이용하여 Windows를 사용하며 Ubuntu도 사용하는 방법을 정리한다.">
+<meta name="twitter:image" content="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/wsl-logo.png">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/06/install-nodejs/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Node.js 설치하기 | jslee's blog</title>
+  <title>WSL 환경에 Ubuntu 설정하기 | jslee's blog</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/06/install-nodejs/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Node.js 설치하기
+          <h2 class="post-title" itemprop="name headline">WSL 환경에 Ubuntu 설정하기
 
               
             
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="Post created: 2019-08-06 20:21:42 / Updated at: 14:08:11" itemprop="dateCreated datePublished" datetime="2019-08-06T20:21:42+09:00">2019-08-06</time>
+              <time title="Post created: 2019-08-08 20:28:57 / Updated at: 12:38:10" itemprop="dateCreated datePublished" datetime="2019-08-08T20:28:57+09:00">2019-08-08</time>
             </span>
           
 
@@ -451,7 +451,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
 
                 
                 
@@ -469,8 +469,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/06/install-nodejs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/06/install-nodejs/" itemprop="commentCount"></span>
+                <a href="/2019/08/08/ubuntu-on-wsl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/08/ubuntu-on-wsl/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,25 +501,32 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/06/install-nodejs/nodejs-logo.svg" width="250">
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/08/ubuntu-on-wsl/wsl-logo.png" width="250">
 
-<p><a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nodesource/distributions/blob/master/README.md</a></p>
-<p>위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.</p>
+<p>Windows Subsystem for Linux 환경을 이용하여 Windows를 사용하며 Ubuntu도 사용하는 방법을 정리한다.</p>
 <a id="more"></a>
 
-<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>다음 명령어를 이용하여 각 환경에서 Node.js를 설치할 수 있다.</p>
-<h3 id="Ubuntu-또는-Debian-기반"><a href="#Ubuntu-또는-Debian-기반" class="headerlink" title="Ubuntu 또는 Debian 기반"></a>Ubuntu 또는 Debian 기반</h3><h4 id="U-D-기반-Node-js-v12-x-설치"><a href="#U-D-기반-Node-js-v12-x-설치" class="headerlink" title="U/D 기반 Node.js v12.x 설치"></a>U/D 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-
-<h4 id="U-D-기반-Node-js-v11-x-설치"><a href="#U-D-기반-Node-js-v11-x-설치" class="headerlink" title="U/D 기반 Node.js v11.x 설치"></a>U/D 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-
-<h4 id="U-D-기반-Node-js-v10-x-설치"><a href="#U-D-기반-Node-js-v10-x-설치" class="headerlink" title="U/D 기반 Node.js v10.x 설치"></a>U/D 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-
-<h3 id="Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><a href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등" class="headerlink" title="Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)"></a>Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</h3><h4 id="EL-기반-Node-js-v12-x-설치"><a href="#EL-기반-Node-js-v12-x-설치" class="headerlink" title="EL 기반 Node.js v12.x 설치"></a>EL 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_12.x | bash -</span><br></pre></td></tr></table></figure>
-
-<h4 id="EL-기반-Node-js-v11-x-설치"><a href="#EL-기반-Node-js-v11-x-설치" class="headerlink" title="EL 기반 Node.js v11.x 설치"></a>EL 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_11.x | bash -</span><br></pre></td></tr></table></figure>
-
-<h4 id="EL-기반-Node-js-v10-x-설치"><a href="#EL-기반-Node-js-v10-x-설치" class="headerlink" title="EL 기반 Node.js v10.x 설치"></a>EL 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br></pre></td></tr></table></figure>
-
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>Windows 10 버전 1607 이상에서는 가상 머신이 없이도 Linux 환경에서 작업할 수 있다.<br>바로 Windows Subsystem for Linux, 줄여서 WSL이 있기 때문이다.</p>
+<p>다음과 같은 순서로 WSL을 통해 Ubuntu를 설치할 수 있다.</p>
+<ol>
+<li>제어판 → 프로그램 → 프로그램 및 기능 → Windows 기능 켜기/끄기를 선택한다.</li>
+<li>목록에서 Linux용 Windows 하위 시스템을 찾아 체크박스에 체크한다.</li>
+<li>확인 버튼을 누르면 자동으로 설치가 되며 설치가 완료되면 안내에 따라 컴퓨터를 재부팅한다.</li>
+<li>컴퓨터에 내장된 Microsoft Store를 열고 Ubuntu를 검색하여 설치한다.</li>
+<li>설치가 완료되면 Ubuntu 앱을 연다.</li>
+<li>콘솔 창이 뜨면 조금 기다린다.</li>
+<li>Enter new UNIX username 문구가 나타나면 Ubuntu에서 사용할 계정을 입력한다.</li>
+<li>그 후 비밀번호를 두 번 입력하면 설치가 완료된다.</li>
+</ol>
+<h2 id="장단점"><a href="#장단점" class="headerlink" title="장단점"></a>장단점</h2><p>시스템 구축과 관련된 일을 하다보면 윈도우에서는 제약이 너무 많아서 리눅스 환경이 가장 적합하다고 느껴진다.<br>개발 일을 해도 Python이나 Node.js 등등 윈도우를 지원하긴 하지만 환경 구성에는 리눅스에 비빌 수가 없다.</p>
+<p>그런데 막상 우분투 데스크탑을 깔아버리면 뱅킹도 안되고 게임도 안되고 쓰다가 지쳐서 에잉 다신 안 써 하면서 윈도우로 돌아오게 된다.<br>그러고 다시 아 불편해 리눅스 깔까? 무한 반복이다.</p>
+<p>그 때 나를 구원해준 것이 바로 WSL이었다.<br>윈도우의 안정성과 보편성을 가진 채로 리눅스의 매력까지 즐길 수 있게 된 것이었다.</p>
+<p>성능도 나름 나쁘지 않았고 MobaXterm과 같은 도구를 이용하면 아주 손쉽게 PyCharm 등의 GUI 소프트웨어도 실행해서 사용할 수 있었다.<br>그래서 지금까지도 계속 쓰고 있다.</p>
+<p>한 가지 아쉬운 점은 Docker를 못 쓴다는 것이다.<br>찾아보니 파일 시스템 속도도 좀 느리고 리눅스 시스템 콜을 제대로 지원하지 못한다는 단점도 있다고 한다.<br>근데 나는 Docker만 빼면 그냥 그럭저럭 좋은 것 같다.</p>
+<p>WSL을 이용해서 지금 어떻게 작업을 하고 있는지<br>설정 방법 등의 내용은 다음에 따로 정리해서 올릴 것이다.</p>
+<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
+<li><a href="https://webdir.tistory.com/541" target="_blank" rel="noopener">윈도우즈에서 리눅스 설치 - WSL</a></li>
+</ul>
 
       
     </div>
@@ -546,7 +553,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+            <a href="/tags/WSL/" rel="tag"># WSL</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
           
         </div>
       
@@ -559,8 +568,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/05/run-kafka-with-docker/" rel="next" title="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
-                <i class="fa fa-chevron-left"></i> Docker를 이용하여 Zookeeper와 Kafka 실행하기
+              <a href="/2019/08/07/change-docker-data-dir/" rel="next" title="Docker 데이터 디렉토리 변경">
+                <i class="fa fa-chevron-left"></i> Docker 데이터 디렉토리 변경
               </a>
             
           </div>
@@ -568,10 +577,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/07/change-docker-data-dir/" rel="prev" title="Docker 데이터 디렉토리 변경">
-                Docker 데이터 디렉토리 변경 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -785,7 +790,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-또는-Debian-기반"><span class="nav-number">2.1.</span> <span class="nav-text">Ubuntu 또는 Debian 기반</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v12-x-설치"><span class="nav-number">2.1.1.</span> <span class="nav-text">U/D 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v11-x-설치"><span class="nav-number">2.1.2.</span> <span class="nav-text">U/D 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v10-x-설치"><span class="nav-number">2.1.3.</span> <span class="nav-text">U/D 기반 Node.js v10.x 설치</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><span class="nav-number">2.2.</span> <span class="nav-text">Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v12-x-설치"><span class="nav-number">2.2.1.</span> <span class="nav-text">EL 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v11-x-설치"><span class="nav-number">2.2.2.</span> <span class="nav-text">EL 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v10-x-설치"><span class="nav-number">2.2.3.</span> <span class="nav-text">EL 기반 Node.js v10.x 설치</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#장단점"><span class="nav-number">3.</span> <span class="nav-text">장단점</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고자료"><span class="nav-number">4.</span> <span class="nav-text">참고자료</span></a></li></ol></div>
             
 
           </div>
@@ -958,9 +963,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/06/install-nodejs/";
-    this.page.identifier = "2019/08/06/install-nodejs/";
-    this.page.title = 'Node.js 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/08/ubuntu-on-wsl/";
+    this.page.identifier = "2019/08/08/ubuntu-on-wsl/";
+    this.page.title = 'WSL 환경에 Ubuntu 설정하기';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
