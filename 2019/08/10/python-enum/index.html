@@ -99,20 +99,18 @@
 
 
 
-  <meta name="description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
-<meta name="keywords" content="Node.js">
+  <meta name="description" content="개요현실의 문제를 프로그래밍으로 다루려고 고민하다 보면 조건에 따른 분기를 어떻게 처리할 것인지에 대해 생각하게 된다.이 때 단순하고 전통적인 방식으로 조건을 확인하고 맞으면 이거, 아니면 저거 식의 if-else문을 사용해도 되지만더 나은 프로그래밍 방식에 대한 가치관을 세우고 객체지향, 함수형 등의 다양한 개념을 접하다 보면사람에 따라, 상황에 따라 열">
+<meta name="keywords" content="Python,Enum">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/06/install-nodejs/index.html">
+<meta property="og:title" content="Python Enum 클래스">
+<meta property="og:url" content="https://www.jslee.me/2019/08/10/python-enum/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
+<meta property="og:description" content="개요현실의 문제를 프로그래밍으로 다루려고 고민하다 보면 조건에 따른 분기를 어떻게 처리할 것인지에 대해 생각하게 된다.이 때 단순하고 전통적인 방식으로 조건을 확인하고 맞으면 이거, 아니면 저거 식의 if-else문을 사용해도 되지만더 나은 프로그래밍 방식에 대한 가치관을 세우고 객체지향, 함수형 등의 다양한 개념을 접하다 보면사람에 따라, 상황에 따라 열">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
-<meta property="og:updated_time" content="2019-08-06T05:08:11.231Z">
+<meta property="og:updated_time" content="2019-08-10T12:38:10.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js 설치하기">
-<meta name="twitter:description" content="개요  https://github.com/nodesource/distributions/blob/master/README.md 위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/06/install-nodejs/nodejs-logo.svg">
+<meta name="twitter:title" content="Python Enum 클래스">
+<meta name="twitter:description" content="개요현실의 문제를 프로그래밍으로 다루려고 고민하다 보면 조건에 따른 분기를 어떻게 처리할 것인지에 대해 생각하게 된다.이 때 단순하고 전통적인 방식으로 조건을 확인하고 맞으면 이거, 아니면 저거 식의 if-else문을 사용해도 되지만더 나은 프로그래밍 방식에 대한 가치관을 세우고 객체지향, 함수형 등의 다양한 개념을 접하다 보면사람에 따라, 상황에 따라 열">
 
 
 
@@ -120,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/06/install-nodejs/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/10/python-enum/">
 
 
 
@@ -130,7 +128,7 @@
   };
 </script>
 
-  <title>Node.js 설치하기 | jslee's blog</title>
+  <title>Python Enum 클래스 | jslee's blog</title>
   
 
 
@@ -389,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/06/install-nodejs/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/10/python-enum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Node.js 설치하기
+          <h2 class="post-title" itemprop="name headline">Python Enum 클래스
 
               
             
@@ -432,7 +430,7 @@
                 
               
 
-              <time title="Post created: 2019-08-06 20:21:42 / Updated at: 14:08:11" itemprop="dateCreated datePublished" datetime="2019-08-06T20:21:42+09:00">2019-08-06</time>
+              <time title="Post created: 2019-08-10 20:35:38 / Updated at: 21:38:10" itemprop="dateCreated datePublished" datetime="2019-08-10T20:35:38+09:00">2019-08-10</time>
             </span>
           
 
@@ -451,7 +449,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/프로그래밍/" itemprop="url" rel="index"><span itemprop="name">프로그래밍</span></a></span>
 
                 
                 
@@ -469,8 +467,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/06/install-nodejs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/06/install-nodejs/" itemprop="commentCount"></span>
+                <a href="/2019/08/10/python-enum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/10/python-enum/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,25 +499,27 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/06/install-nodejs/nodejs-logo.svg" width="250">
-
-<p><a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nodesource/distributions/blob/master/README.md</a></p>
-<p>위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.</p>
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>현실의 문제를 프로그래밍으로 다루려고 고민하다 보면 조건에 따른 분기를 어떻게 처리할 것인지에 대해 생각하게 된다.<br>이 때 단순하고 전통적인 방식으로 조건을 확인하고 맞으면 이거, 아니면 저거 식의 if-else문을 사용해도 되지만<br>더 나은 프로그래밍 방식에 대한 가치관을 세우고 객체지향, 함수형 등의 다양한 개념을 접하다 보면<br>사람에 따라, 상황에 따라 열거형 클래스 등을 이용해서 처리하기도 한다.</p>
+<p>Python에서는 3.4 버전부터 열거형 클래스인 Enum을 기본으로 탑재하였다.<br>이 문서에서는 이것을 사용하는 방법을 정리한다.</p>
 <a id="more"></a>
 
-<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>다음 명령어를 이용하여 각 환경에서 Node.js를 설치할 수 있다.</p>
-<h3 id="Ubuntu-또는-Debian-기반"><a href="#Ubuntu-또는-Debian-기반" class="headerlink" title="Ubuntu 또는 Debian 기반"></a>Ubuntu 또는 Debian 기반</h3><h4 id="U-D-기반-Node-js-v12-x-설치"><a href="#U-D-기반-Node-js-v12-x-설치" class="headerlink" title="U/D 기반 Node.js v12.x 설치"></a>U/D 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<h2 id="사용법"><a href="#사용법" class="headerlink" title="사용법"></a>사용법</h2><h3 id="기본"><a href="#기본" class="headerlink" title="기본"></a>기본</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> enum</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Color</span><span class="params">(enum.Enum)</span>:</span></span><br><span class="line">    RED = <span class="number">0</span></span><br><span class="line">    GREEN = <span class="number">1</span></span><br><span class="line">    BLUE = <span class="number">2</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="U-D-기반-Node-js-v11-x-설치"><a href="#U-D-기반-Node-js-v11-x-설치" class="headerlink" title="U/D 기반 Node.js v11.x 설치"></a>U/D 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_11.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<p><code>enum.Enum</code> 클래스를 상속받는 <code>Color</code> 클래스는 이제 열거형 상수로 이용된다.<br>이 예제에서는 정수를 이용하나 정수 뿐만 아니라 모든 자료형을 사용할 수 있다.</p>
+<p>기본적인 사용에서는 다음과 같은 결과를 가져올 수 있다.<br>각 코드에 대한 반환값은 다음 줄에 주석으로 표기하였다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">print(Color)</span><br><span class="line"><span class="comment"># &lt;enum 'Color'&gt;</span></span><br><span class="line"></span><br><span class="line">print(Color.RED, Color.BLUE, Color.GREEN)</span><br><span class="line"><span class="comment"># Color.RED Color.BLUE Color.GREEN</span></span><br><span class="line"></span><br><span class="line">print(Color.RED.name)</span><br><span class="line"><span class="comment"># RED</span></span><br><span class="line"></span><br><span class="line">print(Color.RED.value)</span><br><span class="line"><span class="comment"># 0</span></span><br><span class="line"></span><br><span class="line">print(repr(Color.RED))</span><br><span class="line"><span class="comment"># &lt;Color.RED: 0&gt;</span></span><br><span class="line"></span><br><span class="line">print(type(Color.RED))</span><br><span class="line"><span class="comment"># &lt;enum 'Color'&gt;</span></span><br><span class="line"></span><br><span class="line">print(Color(<span class="number">0</span>), Color(<span class="number">2</span>))</span><br><span class="line"><span class="comment"># Color.RED Color.BLUE</span></span><br><span class="line"></span><br><span class="line">print(Color[<span class="string">'RED'</span>], Color[<span class="string">'BLUE'</span>])</span><br><span class="line"><span class="comment"># Color.RED Color.BLUE</span></span><br><span class="line"></span><br><span class="line">print(Color.RED == Color.RED)</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">print(Color.RED == <span class="number">0</span>)</span><br><span class="line"><span class="comment"># False</span></span><br><span class="line"><span class="comment">## enum을 정수와 비교하는 것은 항상 False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> Color:</span><br><span class="line">    print(c)</span><br><span class="line"><span class="comment"># Color.RED</span></span><br><span class="line"><span class="comment"># Color.GREEN</span></span><br><span class="line"><span class="comment"># Color.BLUE</span></span><br><span class="line"></span><br><span class="line">print(list(Color))</span><br><span class="line"><span class="comment"># [&lt;Color.RED: 0&gt;, &lt;Color.GREEN: 1&gt;, &lt;Color.BLUE: 2&gt;]</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="U-D-기반-Node-js-v10-x-설치"><a href="#U-D-기반-Node-js-v10-x-설치" class="headerlink" title="U/D 기반 Node.js v10.x 설치"></a>U/D 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
+<h3 id="Unique"><a href="#Unique" class="headerlink" title="Unique"></a>Unique</h3><p>열거형 데이터의 인덱스에 대한 유일성을 보장해야 하는 경우가 있을 수 있다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@enum.unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foods</span><span class="params">(enum.Enum)</span>:</span></span><br><span class="line">    SNACK = <span class="number">0</span></span><br><span class="line">    COKE = <span class="number">1</span></span><br><span class="line">    CIDER = <span class="number">1</span></span><br><span class="line">    JUICE = <span class="number">1</span></span><br><span class="line">    PIZZA = <span class="number">2</span></span><br><span class="line">    BURGER = <span class="number">2</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><a href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등" class="headerlink" title="Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)"></a>Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</h3><h4 id="EL-기반-Node-js-v12-x-설치"><a href="#EL-기반-Node-js-v12-x-설치" class="headerlink" title="EL 기반 Node.js v12.x 설치"></a>EL 기반 Node.js v12.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_12.x | bash -</span><br></pre></td></tr></table></figure>
+<p><code>enum.unique</code>라는 Decoration을 사용하면 위와 같이 중복된 값을 가지는 속성이 있는 경우 에러를 발생시킨다.</p>
+<h3 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h3><p>Python 3.6 버전 이상에서는 <code>enum.auto()</code> 함수를 이용하여 자동으로 인덱스를 할당할 수 있다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewColor</span><span class="params">(enum.Enum)</span>:</span></span><br><span class="line">    RED = enum.auto()</span><br><span class="line">    GREEN = enum.auto()</span><br><span class="line">    BLUE = enum.auto()</span><br></pre></td></tr></table></figure>
 
-<h4 id="EL-기반-Node-js-v11-x-설치"><a href="#EL-기반-Node-js-v11-x-설치" class="headerlink" title="EL 기반 Node.js v11.x 설치"></a>EL 기반 Node.js v11.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_11.x | bash -</span><br></pre></td></tr></table></figure>
-
-<h4 id="EL-기반-Node-js-v10-x-설치"><a href="#EL-기반-Node-js-v10-x-설치" class="headerlink" title="EL 기반 Node.js v10.x 설치"></a>EL 기반 Node.js v10.x 설치</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br></pre></td></tr></table></figure>
-
+<p>인덱스는 1부터 시작하고 1씩 증가한다.</p>
+<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
+<li><a href="https://pythonkim.tistory.com/90" target="_blank" rel="noopener">enum 클래스</a></li>
+</ul>
 
       
     </div>
@@ -546,7 +546,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Enum/" rel="tag"># Enum</a>
           
         </div>
       
@@ -559,8 +561,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/05/run-kafka-with-docker/" rel="next" title="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
-                <i class="fa fa-chevron-left"></i> Docker를 이용하여 Zookeeper와 Kafka 실행하기
+              <a href="/2019/08/09/install-mobaxterm-on-windows/" rel="next" title="Windows에 MobaXterm 설치하기">
+                <i class="fa fa-chevron-left"></i> Windows에 MobaXterm 설치하기
               </a>
             
           </div>
@@ -568,10 +570,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/07/change-docker-data-dir/" rel="prev" title="Docker 데이터 디렉토리 변경">
-                Docker 데이터 디렉토리 변경 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -799,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#설치"><span class="nav-number">2.</span> <span class="nav-text">설치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-또는-Debian-기반"><span class="nav-number">2.1.</span> <span class="nav-text">Ubuntu 또는 Debian 기반</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v12-x-설치"><span class="nav-number">2.1.1.</span> <span class="nav-text">U/D 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v11-x-설치"><span class="nav-number">2.1.2.</span> <span class="nav-text">U/D 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-D-기반-Node-js-v10-x-설치"><span class="nav-number">2.1.3.</span> <span class="nav-text">U/D 기반 Node.js v10.x 설치</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enterprise-Linux-기반-CentOS-RHEL-Fedora-등"><span class="nav-number">2.2.</span> <span class="nav-text">Enterprise Linux 기반 (CentOS, RHEL, Fedora 등)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v12-x-설치"><span class="nav-number">2.2.1.</span> <span class="nav-text">EL 기반 Node.js v12.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v11-x-설치"><span class="nav-number">2.2.2.</span> <span class="nav-text">EL 기반 Node.js v11.x 설치</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EL-기반-Node-js-v10-x-설치"><span class="nav-number">2.2.3.</span> <span class="nav-text">EL 기반 Node.js v10.x 설치</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#사용법"><span class="nav-number">2.</span> <span class="nav-text">사용법</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#기본"><span class="nav-number">2.1.</span> <span class="nav-text">기본</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unique"><span class="nav-number">2.2.</span> <span class="nav-text">Unique</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto"><span class="nav-number">2.3.</span> <span class="nav-text">Auto</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고자료"><span class="nav-number">3.</span> <span class="nav-text">참고자료</span></a></li></ol></div>
             
 
           </div>
@@ -972,9 +970,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/06/install-nodejs/";
-    this.page.identifier = "2019/08/06/install-nodejs/";
-    this.page.title = 'Node.js 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/10/python-enum/";
+    this.page.identifier = "2019/08/10/python-enum/";
+    this.page.title = 'Python Enum 클래스';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
