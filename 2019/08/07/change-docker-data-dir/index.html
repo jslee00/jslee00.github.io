@@ -99,18 +99,20 @@
 
 
 
-  <meta name="description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
+  <meta name="description" content="개요  Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/">
 <meta name="keywords" content="Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 데이터 디렉토리 변경">
 <meta property="og:url" content="https://www.jslee.me/2019/08/07/change-docker-data-dir/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
+<meta property="og:description" content="개요  Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-08-07T12:08:09.203Z">
+<meta property="og:image" content="https://www.jslee.me/2019/08/07/change-docker-data-dir/directory.svg">
+<meta property="og:updated_time" content="2019-08-10T16:50:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 데이터 디렉토리 변경">
-<meta name="twitter:description" content="개요Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/do">
+<meta name="twitter:description" content="개요  Docker는 기본적으로 /var/lib/docker 디렉토리에 Docker Image 등의 데이터를 저장한다.이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다. 따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.이 페이지에서는 /home/">
+<meta name="twitter:image" content="https://www.jslee.me/2019/08/07/change-docker-data-dir/directory.svg">
 
 
 
@@ -430,13 +432,23 @@
                 
               
 
-              <time title="Post created: 2019-08-07 20:58:33 / Updated at: 21:08:09" itemprop="dateCreated datePublished" datetime="2019-08-07T20:58:33+09:00">2019-08-07</time>
+              <time title="Post created: 2019-08-07 20:58:33" itemprop="dateCreated datePublished" datetime="2019-08-07T20:58:33+09:00">2019-08-07</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-11 01:50:12" itemprop="dateModified" datetime="2019-08-11T01:50:12+09:00">2019-08-11</time>
+              </span>
             
           
 
@@ -499,7 +511,9 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>Docker는 기본적으로 <code>/var/lib/docker</code> 디렉토리에 Docker Image 등의 데이터를 저장한다.<br>이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.</p>
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/07/change-docker-data-dir/directory.svg" width="200">
+
+<p>Docker는 기본적으로 <code>/var/lib/docker</code> 디렉토리에 Docker Image 등의 데이터를 저장한다.<br>이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.</p>
 <p>따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.<br>이 페이지에서는 <code>/home/docker</code> 디렉토리로 변경한다.</p>
 <a id="more"></a>
 
@@ -529,6 +543,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
 
 <h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
+<li><a href="https://www.flaticon.com/authors/icongeek26" target="_blank" rel="noopener">Icons made by Icongeek26 CC 3.0 BY</a></li>
 <li><a href="http://dveamer.github.io/backend/DockerImageDirectory.html" target="_blank" rel="noopener">Docker 설치 후 이미지 보관 디렉토리 변경</a></li>
 <li><a href="https://stackoverflow.com/questions/26166550/set-docker-opts-in-centos" target="_blank" rel="noopener">Set Docker_Opts in centos</a></li>
 </ul>
@@ -661,7 +676,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -733,7 +748,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -859,7 +878,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.60</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.61</div>
 
 
         

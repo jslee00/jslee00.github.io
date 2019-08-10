@@ -99,20 +99,20 @@
 
 
 
-  <meta name="description" content="개요  운영체제 CentOS를 설치하는 방법을 정리한다.">
-<meta name="keywords" content="CentOS">
+  <meta name="description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
+<meta name="keywords" content="Terminal,Zsh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS 설치하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/02/install-centos/index.html">
+<meta property="og:title" content="Ubuntu에 Zsh 구성하기">
+<meta property="og:url" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  운영체제 CentOS를 설치하는 방법을 정리한다.">
+<meta property="og:description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/02/install-centos/centos-logo.png">
-<meta property="og:updated_time" content="2019-08-04T05:15:25.000Z">
+<meta property="og:image" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/terminal.svg">
+<meta property="og:updated_time" content="2019-08-10T16:53:10.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS 설치하기">
-<meta name="twitter:description" content="개요  운영체제 CentOS를 설치하는 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/02/install-centos/centos-logo.png">
+<meta name="twitter:title" content="Ubuntu에 Zsh 구성하기">
+<meta name="twitter:description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
+<meta name="twitter:image" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/terminal.svg">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/02/install-centos/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>CentOS 설치하기 | jslee's blog</title>
+  <title>Ubuntu에 Zsh 구성하기 | jslee's blog</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/02/install-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">CentOS 설치하기
+          <h2 class="post-title" itemprop="name headline">Ubuntu에 Zsh 구성하기
 
               
             
@@ -432,23 +432,13 @@
                 
               
 
-              <time title="Post created: 2019-08-02 04:43:35" itemprop="dateCreated datePublished" datetime="2019-08-02T04:43:35+09:00">2019-08-02</time>
+              <time title="Post created: 2019-08-11 01:35:41 / Updated at: 01:53:10" itemprop="dateCreated datePublished" datetime="2019-08-11T01:35:41+09:00">2019-08-11</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-08-04 14:15:25" itemprop="dateModified" datetime="2019-08-04T14:15:25+09:00">2019-08-04</time>
-              </span>
             
           
 
@@ -461,7 +451,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
 
                 
                 
@@ -479,8 +469,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/02/install-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/02/install-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/11/install-zsh-on-ubuntu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/11/install-zsh-on-ubuntu/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -511,50 +501,70 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/02/install-centos/centos-logo.png" width="200">
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/11/install-zsh-on-ubuntu/terminal.svg" width="200">
 
-<p>운영체제 CentOS를 설치하는 방법을 정리한다.</p>
+<p>개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.<br>이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까?</p>
+<p>나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.<br>이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.</p>
 <a id="more"></a>
 
-<h3 id="버전"><a href="#버전" class="headerlink" title="버전"></a>버전</h3><p>2019년 07월 29일 기준으로 최신 버전인 CentOS 7 1810 버전을 이용하여 설명한다.</p>
-<h2 id="CentOS-다운로드"><a href="#CentOS-다운로드" class="headerlink" title="CentOS 다운로드"></a>CentOS 다운로드</h2><p><a href="https://www.centos.org/download/" target="_blank" rel="noopener">https://www.centos.org/download/</a></p>
-<p>위 경로에서 최신 버전의 CentOS DVD ISO 파일을 다운로드한다.</p>
-<h2 id="CentOS-설치-환경-구성"><a href="#CentOS-설치-환경-구성" class="headerlink" title="CentOS 설치 환경 구성"></a>CentOS 설치 환경 구성</h2><p>다음 중 하나의 방식으로 CentOS 설치 환경을 구성한다.</p>
-<ul>
-<li>로컬 컴퓨터에 VMware 등의 가상화 도구를 이용하여 가상 머신 생성</li>
-<li>직접 CentOS를 설치할 컴퓨터 준비<ul>
-<li>Rufus 등의 도구를 이용하여 CentOS 설치 USB 생성</li>
-</ul>
-</li>
-</ul>
-<h2 id="CentOS-설치"><a href="#CentOS-설치" class="headerlink" title="CentOS 설치"></a>CentOS 설치</h2><p>설치 이미지를 실행하여 가이드에 따라 한국어를 선택하여 설치를 진행한다.</p>
-<p>다음과 같이 설정하고 설치 시작 버튼을 클릭한다.</p>
-<ul>
-<li>설치 대상<ul>
-<li>자동 파티션 설정 선택</li>
-</ul>
-</li>
-<li>네트워크 및 호스트명<ul>
-<li>유선으로 … 연결되었습니다</li>
-</ul>
-</li>
-<li>그 외 기본값</li>
-</ul>
-<p>설치되는 동안 루트 계정의 암호를 설정하고 관리자 계정을 생성한다.</p>
-<p>설치가 완료될 때까지 대기한 후 안내에 따라 기기를 재시작한다.</p>
-<p>그러면 CentOS 설치가 완료된다.</p>
-<h2 id="추가로-확인할-사항"><a href="#추가로-확인할-사항" class="headerlink" title="추가로 확인할 사항"></a>추가로 확인할 사항</h2><h3 id="방화벽으로-인한-문제"><a href="#방화벽으로-인한-문제" class="headerlink" title="방화벽으로 인한 문제"></a>방화벽으로 인한 문제</h3><p>CentOS를 설치하면 기본적으로 방화벽 소프트웨어가 실행되고 있다.</p>
-<p>이로 인하여 사용자 설정으로 개방한 포트에 대하여 외부 접근이 불가능할 수 있다.</p>
-<p>이 때는 다음과 같이 방화벽에 원하는 서비스나 포트를 등록하여 문제를 해결할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --add-service=http</span><br><span class="line">sudo firewall-cmd --permanent --add-port=8080/tcp</span><br><span class="line">sudo firewall-cmd --reload</span><br><span class="line">sudo firewall-cmd --permanent --list-all</span><br></pre></td></tr></table></figure>
+<h2 id="Zsh-설치"><a href="#Zsh-설치" class="headerlink" title="Zsh 설치"></a>Zsh 설치</h2><p>다음 명령어를 이용하여 설치할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure>
 
-<h3 id="기본-소프트웨어-설치"><a href="#기본-소프트웨어-설치" class="headerlink" title="기본 소프트웨어 설치"></a>기본 소프트웨어 설치</h3><p>CentOS를 최소 설치를 선택하여 설치하면 설치 속도는 빨라지지만 시스템 관리 및 서비스 구동에 필요한 기본적인 소프트웨어도 설치되어 있지 않은 상태가 된다.</p>
-<p>다음 목록을 참고하여 기본 소프트웨어 설치를 위한 패키지를 설치할 수 있다.</p>
-<ul>
-<li>ifconfig<ul>
-<li>net-tools</li>
-</ul>
-</li>
+<p>다음 명령어를 이용하여 zsh를 현재 계정의 기본 쉘로 변경할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /usr/bin/zsh</span><br></pre></td></tr></table></figure>
+
+<h2 id="oh-my-zsh-구성"><a href="#oh-my-zsh-구성" class="headerlink" title="oh-my-zsh 구성"></a>oh-my-zsh 구성</h2><h3 id="oh-my-zsh-설치"><a href="#oh-my-zsh-설치" class="headerlink" title="oh-my-zsh 설치"></a>oh-my-zsh 설치</h3><p>다음 명령어를 이용하여 설치할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="테마-변경"><a href="#테마-변경" class="headerlink" title="테마 변경"></a>테마 변경</h3><p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 <code>agnoster</code> 테마를 사용하도록 설정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THEME=<span class="string">"agnoster"</span></span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>폰트가 깨질 경우 Powerline을 지원하는 폰트를 설치한다.</p>
+<p>필자는 D2Coding 폰트를 설치하였다.</p>
+<p>폰트 설치 방법은 추후 별도의 포스트로 정리하도록 하겠다.</p>
+<h3 id="Agnoster-테마-컴퓨터-이름-숨기기-설정"><a href="#Agnoster-테마-컴퓨터-이름-숨기기-설정" class="headerlink" title="Agnoster 테마 컴퓨터 이름 숨기기 설정"></a>Agnoster 테마 컴퓨터 이름 숨기기 설정</h3><p>Agnoster 테마는 기본적으로 매번 입력을 받을 때마다 계정 이름과 컴퓨터 이름을 표시한다.</p>
+<p>이 때문에 조금만 긴 명령어를 입력하고자 하면 쉽게 라인을 넘어가는 경우가 생긴다.</p>
+<p>조금 불편하기 때문에 컴퓨터 이름을 표시하지 않게 설정하여 이런 경우를 줄일 수 있다.</p>
+<p>다음 구문을 <code>~/.zshrc</code> 파일에 추가한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">prompt_context</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ <span class="string">"<span class="variable">$USER</span>"</span> != <span class="string">"<span class="variable">$DEFAULT_USER</span>"</span> || -n <span class="string">"<span class="variable">$SSH_CLIENT</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    prompt_segment black default <span class="string">"%(!.%&#123;%F&#123;yellow&#125;%&#125;.)<span class="variable">$USER</span>"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="New-Line-설정"><a href="#New-Line-설정" class="headerlink" title="New Line 설정"></a>New Line 설정</h3><p>Agnoster 테마는 입력 라인에 표시하는 정보가 많아 조금만 긴 명령어를 입력하면 쉽게 라인을 넘어간다.</p>
+<p>입력을 다음 라인부터 받게 하여 이러한 경우를 줄일 수 있다.</p>
+<p><code>~/.oh-my-zsh/themes/agnoster.zsh-theme</code> 파일을 다음과 같이 수정한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Main prompt</span></span><br><span class="line"><span class="function"><span class="title">build_prompt</span></span>() &#123;</span><br><span class="line">  RETVAL=$?</span><br><span class="line">  prompt_status</span><br><span class="line">  prompt_virtualenv</span><br><span class="line">  prompt_aws</span><br><span class="line">  prompt_context</span><br><span class="line">  prompt_dir</span><br><span class="line">  prompt_git</span><br><span class="line">  prompt_bzr</span><br><span class="line">  prompt_hg</span><br><span class="line">  prompt_newline</span><br><span class="line">  prompt_end</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">prompt_newline</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ -n <span class="variable">$CURRENT_BG</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">" %&#123;%k%F&#123;<span class="variable">$CURRENT_BG</span>&#125;%&#125;<span class="variable">$SEGMENT_SEPARATOR</span></span></span><br><span class="line"><span class="string">    %(?.%F&#123;<span class="variable">$CURRENT_BG</span>&#125;.%F&#123;red&#125;)❯%f"</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"%&#123;%k%&#125;"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">echo</span> -n <span class="string">"%&#123;%f%&#125;"</span></span><br><span class="line">  CURRENT_BG=<span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="zsh-autosuggestions-플러그인-설치"><a href="#zsh-autosuggestions-플러그인-설치" class="headerlink" title="zsh-autosuggestions 플러그인 설치"></a>zsh-autosuggestions 플러그인 설치</h3><p><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">zsh-autosuggestions GitHub Repository</a> 페이지를 참고하여 플러그인을 설치한다.</p>
+<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="zsh-syntax-highlighting-플러그인-설치"><a href="#zsh-syntax-highlighting-플러그인-설치" class="headerlink" title="zsh-syntax-highlighting 플러그인 설치"></a>zsh-syntax-highlighting 플러그인 설치</h3><p><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting GitHub Repository</a> 페이지를 참고하여 플러그인을 설치한다.</p>
+<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="autojump-플러그인-설치"><a href="#autojump-플러그인-설치" class="headerlink" title="autojump 플러그인 설치"></a>autojump 플러그인 설치</h3><p>다음 명령어를 이용하여 플러그인을 설치한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install autojump</span><br></pre></td></tr></table></figure>
+
+<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  autojump</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
+<li><a href="https://www.flaticon.com/authors/smashicons" target="_blank" rel="noopener">Icons made by Smashicons CC 3.0 BY</a></li>
+<li><a href="https://the-illusionist.me/47" target="_blank" rel="noopener">우분투에 zsh와 oh my zsh 설치하기</a></li>
+<li><a href="https://medium.com/harrythegreat/oh-my-zsh-iterm2%EB%A1%9C-%ED%84%B0%EB%AF%B8%EB%84%90%EC%9D%84-%EB%8D%94-%EA%B0%95%EB%A0%A5%ED%95%98%EA%B2%8C-a105f2c01bec" target="_blank" rel="noopener">Oh My ZSH+ iTerm2로 터미널을 더 강력하게</a></li>
 </ul>
 
       
@@ -582,7 +592,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+            <a href="/tags/Terminal/" rel="tag"># Terminal</a>
+          
+            <a href="/tags/Zsh/" rel="tag"># Zsh</a>
           
         </div>
       
@@ -595,8 +607,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/01/start-blog/" rel="next" title="블로그 시작!">
-                <i class="fa fa-chevron-left"></i> 블로그 시작!
+              <a href="/2019/08/10/python-enum/" rel="next" title="Python Enum 클래스">
+                <i class="fa fa-chevron-left"></i> Python Enum 클래스
               </a>
             
           </div>
@@ -604,10 +616,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/03/install-docker-on-centos/" rel="prev" title="CentOS에 Docker 설치하기">
-                CentOS에 Docker 설치하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -839,7 +847,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#버전"><span class="nav-number">1.1.</span> <span class="nav-text">버전</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-다운로드"><span class="nav-number">2.</span> <span class="nav-text">CentOS 다운로드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-설치-환경-구성"><span class="nav-number">3.</span> <span class="nav-text">CentOS 설치 환경 구성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-설치"><span class="nav-number">4.</span> <span class="nav-text">CentOS 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#추가로-확인할-사항"><span class="nav-number">5.</span> <span class="nav-text">추가로 확인할 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#방화벽으로-인한-문제"><span class="nav-number">5.1.</span> <span class="nav-text">방화벽으로 인한 문제</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#기본-소프트웨어-설치"><span class="nav-number">5.2.</span> <span class="nav-text">기본 소프트웨어 설치</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zsh-설치"><span class="nav-number">2.</span> <span class="nav-text">Zsh 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh-구성"><span class="nav-number">3.</span> <span class="nav-text">oh-my-zsh 구성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#oh-my-zsh-설치"><span class="nav-number">3.1.</span> <span class="nav-text">oh-my-zsh 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#테마-변경"><span class="nav-number">3.2.</span> <span class="nav-text">테마 변경</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Agnoster-테마-컴퓨터-이름-숨기기-설정"><span class="nav-number">3.3.</span> <span class="nav-text">Agnoster 테마 컴퓨터 이름 숨기기 설정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#New-Line-설정"><span class="nav-number">3.4.</span> <span class="nav-text">New Line 설정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions-플러그인-설치"><span class="nav-number">3.5.</span> <span class="nav-text">zsh-autosuggestions 플러그인 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting-플러그인-설치"><span class="nav-number">3.6.</span> <span class="nav-text">zsh-syntax-highlighting 플러그인 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autojump-플러그인-설치"><span class="nav-number">3.7.</span> <span class="nav-text">autojump 플러그인 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고자료"><span class="nav-number">4.</span> <span class="nav-text">참고자료</span></a></li></ol></div>
             
 
           </div>
@@ -1012,9 +1020,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/02/install-centos/";
-    this.page.identifier = "2019/08/02/install-centos/";
-    this.page.title = 'CentOS 설치하기';
+    this.page.url = "https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/";
+    this.page.identifier = "2019/08/11/install-zsh-on-ubuntu/";
+    this.page.title = 'Ubuntu에 Zsh 구성하기';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
