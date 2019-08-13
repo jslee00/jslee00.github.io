@@ -64,9 +64,9 @@
       <category term="개발 환경 구축" scheme="https://www.jslee.me/categories/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95/"/>
     
     
-      <category term="Zsh" scheme="https://www.jslee.me/tags/Zsh/"/>
-    
       <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
+    
+      <category term="Zsh" scheme="https://www.jslee.me/tags/Zsh/"/>
     
   </entry>
   
@@ -115,13 +115,13 @@
       <category term="개발 환경 구축" scheme="https://www.jslee.me/categories/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95/"/>
     
     
-      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
-    
       <category term="SSH" scheme="https://www.jslee.me/tags/SSH/"/>
     
       <category term="Windows" scheme="https://www.jslee.me/tags/Windows/"/>
     
       <category term="MobaXterm" scheme="https://www.jslee.me/tags/MobaXterm/"/>
+    
+      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
     
       <category term="X11" scheme="https://www.jslee.me/tags/X11/"/>
     
