@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://www.jslee.me/"/>
-  <updated>2019-08-17T17:23:09.572Z</updated>
+  <updated>2019-08-19T12:23:13.109Z</updated>
   <id>https://www.jslee.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lord of SQL Injection Write Up No.8 Troll</title>
+    <link href="https://www.jslee.me/2019/08/19/los-write-up-08-troll/"/>
+    <id>https://www.jslee.me/2019/08/19/los-write-up-08-troll/</id>
+    <published>2019-08-18T15:00:00.000Z</published>
+    <updated>2019-08-19T12:23:13.109Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300"><p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p><p>이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.</p><a id="more"></a><h2 id="문제-분석"><a href="#문제-분석" class="headerlink" title="문제 분석"></a>문제 분석</h2><h3 id="문제-출제-의도"><a href="#문제-출제-의도" class="headerlink" title="문제 출제 의도"></a>문제 출제 의도</h3><p><code>admin</code>을 필터링하는 <code>ereg()</code> 함수를 우회하여 <code>id</code>값으로 <code>admin</code>을 전달할 수 있는지 확인한다.</p><h3 id="필요-배경-지식"><a href="#필요-배경-지식" class="headerlink" title="필요 배경 지식"></a>필요 배경 지식</h3><h4 id="ereg"><a href="#ereg" class="headerlink" title="ereg"></a>ereg</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int ereg ( string $pattern , string $string [, <span class="keyword">array</span> &amp;$regs ] )</span><br></pre></td></tr></table></figure><ul><li><code>ereg</code> 함수는 문자열에서 <strong>대소문자를 구분하여</strong> 정규표현식 매치를 수행한다.</li><li>반환값은 매치된 문자열의 길이 또는 <code>FALSE</code> 이다.</li><li>php의 <code>ereg</code> 함수에 대해 잘 모르겠다면 다음 링크를 참고하자.</li><li><a href="http://php.net/manual/kr/function.ereg.php" target="_blank" rel="noopener">PHP: ereg - Manual</a></li></ul><h4 id="MySQL-대소문자-구별"><a href="#MySQL-대소문자-구별" class="headerlink" title="MySQL 대소문자 구별"></a>MySQL 대소문자 구별</h4><ul><li>MySQL은 기본적으로 대소문자 구별을 하지 않는다.</li><li>MySQL의 대소문자 구별에 대한 자세한 내용을 알고 싶다면 다음 링크를 참고하자.</li><li><a href="https://zetawiki.com/wiki/MySQL_%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90_%EA%B5%AC%EB%B3%84" target="_blank" rel="noopener">MySQL 대소문자 구별 - 제타위키</a></li></ul><h3 id="소스-코드-분석"><a href="#소스-코드-분석" class="headerlink" title="소스 코드 분석"></a>소스 코드 분석</h3><p>goblin 문제의 php 소스 코드는 다음과 같다.</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">  <span class="keyword">include</span> <span class="string">"./config.php"</span>;</span><br><span class="line">  login_chk();</span><br><span class="line">  dbconnect();</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/\'|\"|\`/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Quotes ~_~"</span>);</span><br><span class="line">  $query = <span class="string">"select id from prob_goblin where id='guest' and no=&#123;$_GET[no]&#125;"</span>;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">  $result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"goblin"</span>);</span><br><span class="line">  highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/\'|\"|\`/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Quotes ~_~"</span>);</span><br></pre></td></tr></table></figure><ul><li>GET방식으로 <code>no</code>를 받고, <code>no</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li><li>또한, <code>no</code>에 <code>&#39;</code>, <code>&quot;</code>, ` 가 들어 있으면 <code>No Quotes ~_~</code>가 뜨고 문제 풀이에 실패한다.</li></ul><h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$query = <span class="string">"select id from prob_goblin where id='guest' and no=&#123;$_GET[no]&#125;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"goblin"</span>);</span><br></pre></td></tr></table></figure><ul><li>받은 <code>no</code>가 직접 쿼리에 들어간다. 이것으로 SQL Injection 공격이 가능하다는 것을 알 수 있다.</li><li>문제 풀이가 성공하는 조건은 ‘데이터베이스에서 받은 <code>id</code>에 <code>&quot;admin&quot;</code>이라는 값이 들어있음’이다.</li></ul><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol><li><p>대소문자 구분 이용</p><p>PHP의 <code>ereg()</code> 함수 부분을 보면</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(@ereg(<span class="string">"admin"</span>,$_GET[id])) <span class="keyword">exit</span>(<span class="string">"HeHe"</span>);</span><br></pre></td></tr></table></figure><p>정규 표현식으로 <code>&quot;admin&quot;</code> 을 전달하는 것을 알 수 있다.<br><code>ereg()</code> 함수는 대소문자를 구분하기 때문에, 이런 경우 <code>admin</code> 이라는 문자열만 매치하게 된다.</p><p>그러나 기본적으로 MySQL에서는 대소문자를 구분하지 않는다.<br>따라서 입력값으로 <code>Admin</code>, <code>ADMIN</code> 과 같이 대문자를 섞은 값을 넣으면 <code>ereg()</code> 함수에서 필터링이 이루어지지 않아 문제가 풀리게 된다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/troll_6d1f080fa30a07dbaf7342285ba0e158.php?id=ADMIN</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_troll <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'ADMIN'</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h2&gt;&lt;img src=&quot;/image/los-main.png&quot; width=&quot;300&quot;&gt;
+
+&lt;p&gt;SQL Injection에 대한 지식을 쌓기 위해 &lt;a href=&quot;https://los.eagle-jump.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Lord of SQL Injection 사이트&lt;/a&gt;의 문제를 풀고 해답을 정리한다.&lt;/p&gt;
+&lt;p&gt;이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+    
+    
+      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+    
+      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+    
+  </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.7 Orge</title>
@@ -226,9 +253,9 @@
       <category term="개발 환경 구축" scheme="https://www.jslee.me/categories/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95/"/>
     
     
-      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
-    
       <category term="Zsh" scheme="https://www.jslee.me/tags/Zsh/"/>
+    
+      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
     
   </entry>
   
@@ -277,13 +304,13 @@
       <category term="개발 환경 구축" scheme="https://www.jslee.me/categories/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95/"/>
     
     
+      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
+    
       <category term="SSH" scheme="https://www.jslee.me/tags/SSH/"/>
     
       <category term="Windows" scheme="https://www.jslee.me/tags/Windows/"/>
     
       <category term="MobaXterm" scheme="https://www.jslee.me/tags/MobaXterm/"/>
-    
-      <category term="Terminal" scheme="https://www.jslee.me/tags/Terminal/"/>
     
       <category term="X11" scheme="https://www.jslee.me/tags/X11/"/>
     

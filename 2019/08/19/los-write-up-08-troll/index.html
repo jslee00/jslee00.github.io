@@ -99,20 +99,20 @@
 
 
 
-  <meta name="description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
-<meta name="keywords" content="Zsh,Terminal">
+  <meta name="description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.">
+<meta name="keywords" content="Lord of SQL Injection,Infosec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu에 Zsh 구성하기">
-<meta property="og:url" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/index.html">
+<meta property="og:title" content="Lord of SQL Injection Write Up No.8 Troll">
+<meta property="og:url" content="https://www.jslee.me/2019/08/19/los-write-up-08-troll/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
+<meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/terminal.svg">
-<meta property="og:updated_time" content="2019-08-10T16:53:10.468Z">
+<meta property="og:image" content="https://www.jslee.me/image/los-main.png">
+<meta property="og:updated_time" content="2019-08-19T12:23:13.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu에 Zsh 구성하기">
-<meta name="twitter:description" content="개요  개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까? 나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.">
-<meta name="twitter:image" content="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/terminal.svg">
+<meta name="twitter:title" content="Lord of SQL Injection Write Up No.8 Troll">
+<meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.">
+<meta name="twitter:image" content="https://www.jslee.me/image/los-main.png">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/">
+  <link rel="canonical" href="https://www.jslee.me/2019/08/19/los-write-up-08-troll/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Ubuntu에 Zsh 구성하기 | jslee's blog</title>
+  <title>Lord of SQL Injection Write Up No.8 Troll | jslee's blog</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/19/los-write-up-08-troll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Ubuntu에 Zsh 구성하기
+          <h2 class="post-title" itemprop="name headline">Lord of SQL Injection Write Up No.8 Troll
 
               
             
@@ -432,7 +432,7 @@
                 
               
 
-              <time title="Post created: 2019-08-11 01:35:41 / Updated at: 01:53:10" itemprop="dateCreated datePublished" datetime="2019-08-11T01:35:41+09:00">2019-08-11</time>
+              <time title="Post created: 2019-08-19 00:00:00 / Updated at: 21:23:13" itemprop="dateCreated datePublished" datetime="2019-08-19T00:00:00+09:00">2019-08-19</time>
             </span>
           
 
@@ -451,7 +451,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Write-Up/" itemprop="url" rel="index"><span itemprop="name">Write Up</span></a></span>
 
                 
                 
@@ -469,8 +469,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/11/install-zsh-on-ubuntu/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/11/install-zsh-on-ubuntu/" itemprop="commentCount"></span>
+                <a href="/2019/08/19/los-write-up-08-troll/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/19/los-write-up-08-troll/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -501,71 +501,54 @@
       
 
       
-        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/11/install-zsh-on-ubuntu/terminal.svg" width="200">
+        <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
 
-<p>개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.<br>이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까?</p>
-<p>나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.<br>이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.</p>
+<p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 8번 troll 문제에 대하여 정리한다.</p>
 <a id="more"></a>
 
-<h2 id="Zsh-설치"><a href="#Zsh-설치" class="headerlink" title="Zsh 설치"></a>Zsh 설치</h2><p>다음 명령어를 이용하여 설치할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure>
+<h2 id="문제-분석"><a href="#문제-분석" class="headerlink" title="문제 분석"></a>문제 분석</h2><h3 id="문제-출제-의도"><a href="#문제-출제-의도" class="headerlink" title="문제 출제 의도"></a>문제 출제 의도</h3><p><code>admin</code>을 필터링하는 <code>ereg()</code> 함수를 우회하여 <code>id</code>값으로 <code>admin</code>을 전달할 수 있는지 확인한다.</p>
+<h3 id="필요-배경-지식"><a href="#필요-배경-지식" class="headerlink" title="필요 배경 지식"></a>필요 배경 지식</h3><h4 id="ereg"><a href="#ereg" class="headerlink" title="ereg"></a>ereg</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int ereg ( string $pattern , string $string [, <span class="keyword">array</span> &amp;$regs ] )</span><br></pre></td></tr></table></figure>
 
-<p>다음 명령어를 이용하여 zsh를 현재 계정의 기본 쉘로 변경할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /usr/bin/zsh</span><br></pre></td></tr></table></figure>
-
-<h2 id="oh-my-zsh-구성"><a href="#oh-my-zsh-구성" class="headerlink" title="oh-my-zsh 구성"></a>oh-my-zsh 구성</h2><h3 id="oh-my-zsh-설치"><a href="#oh-my-zsh-설치" class="headerlink" title="oh-my-zsh 설치"></a>oh-my-zsh 설치</h3><p>다음 명령어를 이용하여 설치할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="테마-변경"><a href="#테마-변경" class="headerlink" title="테마 변경"></a>테마 변경</h3><p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 <code>agnoster</code> 테마를 사용하도록 설정한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THEME=<span class="string">"agnoster"</span></span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>폰트가 깨질 경우 Powerline을 지원하는 폰트를 설치한다.</p>
-<p>필자는 D2Coding 폰트를 설치하였다.</p>
-<p>폰트 설치 방법은 추후 별도의 포스트로 정리하도록 하겠다.</p>
-<h3 id="Agnoster-테마-컴퓨터-이름-숨기기-설정"><a href="#Agnoster-테마-컴퓨터-이름-숨기기-설정" class="headerlink" title="Agnoster 테마 컴퓨터 이름 숨기기 설정"></a>Agnoster 테마 컴퓨터 이름 숨기기 설정</h3><p>Agnoster 테마는 기본적으로 매번 입력을 받을 때마다 계정 이름과 컴퓨터 이름을 표시한다.</p>
-<p>이 때문에 조금만 긴 명령어를 입력하고자 하면 쉽게 라인을 넘어가는 경우가 생긴다.</p>
-<p>조금 불편하기 때문에 컴퓨터 이름을 표시하지 않게 설정하여 이런 경우를 줄일 수 있다.</p>
-<p>다음 구문을 <code>~/.zshrc</code> 파일에 추가한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">prompt_context</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ <span class="string">"<span class="variable">$USER</span>"</span> != <span class="string">"<span class="variable">$DEFAULT_USER</span>"</span> || -n <span class="string">"<span class="variable">$SSH_CLIENT</span>"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    prompt_segment black default <span class="string">"%(!.%&#123;%F&#123;yellow&#125;%&#125;.)<span class="variable">$USER</span>"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="New-Line-설정"><a href="#New-Line-설정" class="headerlink" title="New Line 설정"></a>New Line 설정</h3><p>Agnoster 테마는 입력 라인에 표시하는 정보가 많아 조금만 긴 명령어를 입력하면 쉽게 라인을 넘어간다.</p>
-<p>입력을 다음 라인부터 받게 하여 이러한 경우를 줄일 수 있다.</p>
-<p><code>~/.oh-my-zsh/themes/agnoster.zsh-theme</code> 파일을 다음과 같이 수정한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### Main prompt</span></span><br><span class="line"><span class="function"><span class="title">build_prompt</span></span>() &#123;</span><br><span class="line">  RETVAL=$?</span><br><span class="line">  prompt_status</span><br><span class="line">  prompt_virtualenv</span><br><span class="line">  prompt_aws</span><br><span class="line">  prompt_context</span><br><span class="line">  prompt_dir</span><br><span class="line">  prompt_git</span><br><span class="line">  prompt_bzr</span><br><span class="line">  prompt_hg</span><br><span class="line">  prompt_newline</span><br><span class="line">  prompt_end</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">prompt_newline</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> [[ -n <span class="variable">$CURRENT_BG</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">" %&#123;%k%F&#123;<span class="variable">$CURRENT_BG</span>&#125;%&#125;<span class="variable">$SEGMENT_SEPARATOR</span></span></span><br><span class="line"><span class="string">    %(?.%F&#123;<span class="variable">$CURRENT_BG</span>&#125;.%F&#123;red&#125;)❯%f"</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> -n <span class="string">"%&#123;%k%&#125;"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">echo</span> -n <span class="string">"%&#123;%f%&#125;"</span></span><br><span class="line">  CURRENT_BG=<span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="zsh-autosuggestions-플러그인-설치"><a href="#zsh-autosuggestions-플러그인-설치" class="headerlink" title="zsh-autosuggestions 플러그인 설치"></a>zsh-autosuggestions 플러그인 설치</h3><p><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">zsh-autosuggestions GitHub Repository</a> 페이지를 참고하여 플러그인을 설치한다.</p>
-<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="zsh-syntax-highlighting-플러그인-설치"><a href="#zsh-syntax-highlighting-플러그인-설치" class="headerlink" title="zsh-syntax-highlighting 플러그인 설치"></a>zsh-syntax-highlighting 플러그인 설치</h3><p><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting GitHub Repository</a> 페이지를 참고하여 플러그인을 설치한다.</p>
-<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="autojump-플러그인-설치"><a href="#autojump-플러그인-설치" class="headerlink" title="autojump 플러그인 설치"></a>autojump 플러그인 설치</h3><p>다음 명령어를 이용하여 플러그인을 설치한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install autojump</span><br></pre></td></tr></table></figure>
-
-<p>다음과 같이 <code>~/.zshrc</code> 파일을 수정하여 설치한 플러그인을 적용한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  ...</span><br><span class="line">  autojump</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>다음 명령어를 이용하여 변경사항을 반영한다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h2 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h2><ul>
-<li><a href="https://www.flaticon.com/authors/smashicons" target="_blank" rel="noopener">Icons made by Smashicons CC 3.0 BY</a></li>
-<li><a href="https://the-illusionist.me/47" target="_blank" rel="noopener">우분투에 zsh와 oh my zsh 설치하기</a></li>
-<li><a href="https://medium.com/harrythegreat/oh-my-zsh-iterm2%EB%A1%9C-%ED%84%B0%EB%AF%B8%EB%84%90%EC%9D%84-%EB%8D%94-%EA%B0%95%EB%A0%A5%ED%95%98%EA%B2%8C-a105f2c01bec" target="_blank" rel="noopener">Oh My ZSH+ iTerm2로 터미널을 더 강력하게</a></li>
+<ul>
+<li><code>ereg</code> 함수는 문자열에서 <strong>대소문자를 구분하여</strong> 정규표현식 매치를 수행한다.</li>
+<li>반환값은 매치된 문자열의 길이 또는 <code>FALSE</code> 이다.</li>
+<li>php의 <code>ereg</code> 함수에 대해 잘 모르겠다면 다음 링크를 참고하자.</li>
+<li><a href="http://php.net/manual/kr/function.ereg.php" target="_blank" rel="noopener">PHP: ereg - Manual</a></li>
 </ul>
+<h4 id="MySQL-대소문자-구별"><a href="#MySQL-대소문자-구별" class="headerlink" title="MySQL 대소문자 구별"></a>MySQL 대소문자 구별</h4><ul>
+<li>MySQL은 기본적으로 대소문자 구별을 하지 않는다.</li>
+<li>MySQL의 대소문자 구별에 대한 자세한 내용을 알고 싶다면 다음 링크를 참고하자.</li>
+<li><a href="https://zetawiki.com/wiki/MySQL_%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90_%EA%B5%AC%EB%B3%84" target="_blank" rel="noopener">MySQL 대소문자 구별 - 제타위키</a></li>
+</ul>
+<h3 id="소스-코드-분석"><a href="#소스-코드-분석" class="headerlink" title="소스 코드 분석"></a>소스 코드 분석</h3><p>goblin 문제의 php 소스 코드는 다음과 같다.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">  <span class="keyword">include</span> <span class="string">"./config.php"</span>;</span><br><span class="line">  login_chk();</span><br><span class="line">  dbconnect();</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/\'|\"|\`/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Quotes ~_~"</span>);</span><br><span class="line">  $query = <span class="string">"select id from prob_goblin where id='guest' and no=&#123;$_GET[no]&#125;"</span>;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">  $result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"goblin"</span>);</span><br><span class="line">  highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/\'|\"|\`/i'</span>, $_GET[no])) <span class="keyword">exit</span>(<span class="string">"No Quotes ~_~"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>GET방식으로 <code>no</code>를 받고, <code>no</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li>
+<li>또한, <code>no</code>에 <code>&#39;</code>, <code>&quot;</code>, ` 가 들어 있으면 <code>No Quotes ~_~</code>가 뜨고 문제 풀이에 실패한다.</li>
+</ul>
+<h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$query = <span class="string">"select id from prob_goblin where id='guest' and no=&#123;$_GET[no]&#125;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"goblin"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>받은 <code>no</code>가 직접 쿼리에 들어간다. 이것으로 SQL Injection 공격이 가능하다는 것을 알 수 있다.</li>
+<li>문제 풀이가 성공하는 조건은 ‘데이터베이스에서 받은 <code>id</code>에 <code>&quot;admin&quot;</code>이라는 값이 들어있음’이다.</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol>
+<li><p>대소문자 구분 이용</p>
+<p>PHP의 <code>ereg()</code> 함수 부분을 보면</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(@ereg(<span class="string">"admin"</span>,$_GET[id])) <span class="keyword">exit</span>(<span class="string">"HeHe"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>정규 표현식으로 <code>&quot;admin&quot;</code> 을 전달하는 것을 알 수 있다.<br><code>ereg()</code> 함수는 대소문자를 구분하기 때문에, 이런 경우 <code>admin</code> 이라는 문자열만 매치하게 된다.</p>
+<p>그러나 기본적으로 MySQL에서는 대소문자를 구분하지 않는다.<br>따라서 입력값으로 <code>Admin</code>, <code>ADMIN</code> 과 같이 대문자를 섞은 값을 넣으면 <code>ereg()</code> 함수에서 필터링이 이루어지지 않아 문제가 풀리게 된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/troll_6d1f080fa30a07dbaf7342285ba0e158.php?id=ADMIN</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_troll <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'ADMIN'</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 
       
     </div>
@@ -592,9 +575,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Zsh/" rel="tag"># Zsh</a>
+            <a href="/tags/Lord-of-SQL-Injection/" rel="tag"># Lord of SQL Injection</a>
           
-            <a href="/tags/Terminal/" rel="tag"># Terminal</a>
+            <a href="/tags/Infosec/" rel="tag"># Infosec</a>
           
         </div>
       
@@ -607,8 +590,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/10/python-enum/" rel="next" title="Python Enum 클래스">
-                <i class="fa fa-chevron-left"></i> Python Enum 클래스
+              <a href="/2019/08/18/los-write-up-07-orge/" rel="next" title="Lord of SQL Injection Write Up No.7 Orge">
+                <i class="fa fa-chevron-left"></i> Lord of SQL Injection Write Up No.7 Orge
               </a>
             
           </div>
@@ -616,10 +599,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/12/los-write-up-01-gremlin/" rel="prev" title="Lord of SQL Injection Write Up No.1 Gremlin">
-                Lord of SQL Injection Write Up No.1 Gremlin <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -857,7 +836,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zsh-설치"><span class="nav-number">2.</span> <span class="nav-text">Zsh 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oh-my-zsh-구성"><span class="nav-number">3.</span> <span class="nav-text">oh-my-zsh 구성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#oh-my-zsh-설치"><span class="nav-number">3.1.</span> <span class="nav-text">oh-my-zsh 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#테마-변경"><span class="nav-number">3.2.</span> <span class="nav-text">테마 변경</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Agnoster-테마-컴퓨터-이름-숨기기-설정"><span class="nav-number">3.3.</span> <span class="nav-text">Agnoster 테마 컴퓨터 이름 숨기기 설정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#New-Line-설정"><span class="nav-number">3.4.</span> <span class="nav-text">New Line 설정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions-플러그인-설치"><span class="nav-number">3.5.</span> <span class="nav-text">zsh-autosuggestions 플러그인 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting-플러그인-설치"><span class="nav-number">3.6.</span> <span class="nav-text">zsh-syntax-highlighting 플러그인 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autojump-플러그인-설치"><span class="nav-number">3.7.</span> <span class="nav-text">autojump 플러그인 설치</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고자료"><span class="nav-number">4.</span> <span class="nav-text">참고자료</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#문제-분석"><span class="nav-number">2.</span> <span class="nav-text">문제 분석</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#문제-출제-의도"><span class="nav-number">2.1.</span> <span class="nav-text">문제 출제 의도</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#필요-배경-지식"><span class="nav-number">2.2.</span> <span class="nav-text">필요 배경 지식</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ereg"><span class="nav-number">2.2.1.</span> <span class="nav-text">ereg</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL-대소문자-구별"><span class="nav-number">2.2.2.</span> <span class="nav-text">MySQL 대소문자 구별</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#소스-코드-분석"><span class="nav-number">2.3.</span> <span class="nav-text">소스 코드 분석</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Filter"><span class="nav-number">2.3.1.</span> <span class="nav-text">Filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Query"><span class="nav-number">2.3.2.</span> <span class="nav-text">Query</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution</span></a></li></ol></div>
             
 
           </div>
@@ -1030,9 +1009,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/";
-    this.page.identifier = "2019/08/11/install-zsh-on-ubuntu/";
-    this.page.title = 'Ubuntu에 Zsh 구성하기';
+    this.page.url = "https://www.jslee.me/2019/08/19/los-write-up-08-troll/";
+    this.page.identifier = "2019/08/19/los-write-up-08-troll/";
+    this.page.title = 'Lord of SQL Injection Write Up No.8 Troll';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
