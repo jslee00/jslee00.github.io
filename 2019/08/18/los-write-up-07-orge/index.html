@@ -108,7 +108,7 @@
 <meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 7번 orge 문제에 대하여 정리한다.">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://www.jslee.me/image/los-main.png">
-<meta property="og:updated_time" content="2019-08-17T17:23:09.572Z">
+<meta property="og:updated_time" content="2019-08-20T11:08:10.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lord of SQL Injection Write Up No.7 Orge">
 <meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 7번 orge 문제에 대하여 정리한다.">
@@ -432,13 +432,23 @@
                 
               
 
-              <time title="Post created: 2019-08-18 02:10:31 / Updated at: 02:23:09" itemprop="dateCreated datePublished" datetime="2019-08-18T02:10:31+09:00">2019-08-18</time>
+              <time title="Post created: 2019-08-18 02:10:31" itemprop="dateCreated datePublished" datetime="2019-08-18T02:10:31+09:00">2019-08-18</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-20 20:08:10" itemprop="dateModified" datetime="2019-08-20T20:08:10+09:00">2019-08-20</time>
+              </span>
             
           
 
@@ -514,7 +524,7 @@
 <h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/or|and/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"HeHe"</span>);</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>GET방식으로 <code>pw</code>를 받고, <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li>
+<li>GET 방식으로 <code>pw</code>를 받고, <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li>
 <li>또한, <code>pw</code>에 대소문자 구분 없이 <code>or</code>, <code>and</code> 가 들어 있으면 <code>HeHe</code>가 뜨고 문제 풀이에 실패한다.</li>
 </ul>
 <h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$query = <span class="string">"select id from prob_orge where id='guest' and pw='&#123;$_GET[pw]&#125;'"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>]) <span class="keyword">echo</span> <span class="string">"&lt;h2&gt;Hello &#123;$result[id]&#125;&lt;/h2&gt;"</span>;</span><br><span class="line"></span><br><span class="line">$_GET[pw] = addslashes($_GET[pw]);</span><br><span class="line">$query = <span class="string">"select pw from prob_orge where id='admin' and pw='&#123;$_GET[pw]&#125;'"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>(($result[<span class="string">'pw'</span>]) &amp;&amp; ($result[<span class="string">'pw'</span>] == $_GET[<span class="string">'pw'</span>])) solve(<span class="string">"orge"</span>);</span><br></pre></td></tr></table></figure>
@@ -672,7 +682,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -880,7 +890,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.70</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.71</div>
 
 
         

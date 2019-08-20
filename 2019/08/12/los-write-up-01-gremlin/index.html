@@ -108,7 +108,7 @@
 <meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 1번 gremlin 문제에 대하여 정리한다.">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://www.jslee.me/image/los-main.png">
-<meta property="og:updated_time" content="2019-08-13T14:53:11.334Z">
+<meta property="og:updated_time" content="2019-08-20T11:08:10.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lord of SQL Injection Write Up No.1 Gremlin">
 <meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 1번 gremlin 문제에 대하여 정리한다.">
@@ -447,7 +447,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-08-13 23:53:11" itemprop="dateModified" datetime="2019-08-13T23:53:11+09:00">2019-08-13</time>
+                <time title="Updated at: 2019-08-20 20:08:10" itemprop="dateModified" datetime="2019-08-20T20:08:10+09:00">2019-08-20</time>
               </span>
             
           
@@ -553,7 +553,7 @@
 <h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[id])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>); <span class="comment">// do not try to attack another table, database!</span></span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>GET방식으로 <code>id</code>와 <code>pw</code>를 받으며, <code>id</code>나 <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.<ul>
+<li>GET 방식으로 <code>id</code>와 <code>pw</code>를 받으며, <code>id</code>나 <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.<ul>
 <li><code>preg_match(&#39;/prob|_|\.|\(\)/i&#39;, $_GET[id])</code> 는 <code>$_GET[id]</code>에서 정규표현식 <code>&#39;/prob|_|\.|\(\)/i&#39;</code> 을 매치한다.</li>
 <li>즉, <code>if(preg_match(&#39;/prob|_|\.|\(\)/i&#39;, $_GET[id])) exit(&quot;No Hack ~_~&quot;);</code> 이 문장을 통해 <code>$_GET[id]</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 중 하나라도 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li>
 </ul>
@@ -712,7 +712,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -920,7 +920,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.70</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.71</div>
 
 
         
