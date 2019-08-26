@@ -99,19 +99,19 @@
 
 
 
-  <meta name="description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.">
+  <meta name="description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 12번 darkknight 문제에 대하여 정리한다.">
 <meta name="keywords" content="Lord of SQL Injection,Infosec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lord of SQL Injection Write Up No.10 Skeleton">
+<meta property="og:title" content="Lord of SQL Injection Write Up No.12 Darkknight">
 <meta property="og:url" content="https://www.jslee.me/2019/08/23/los-write-up-12-darkknight/index.html">
 <meta property="og:site_name" content="jslee&#39;s blog">
-<meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.">
+<meta property="og:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 12번 darkknight 문제에 대하여 정리한다.">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://www.jslee.me/image/los-main.png">
-<meta property="og:updated_time" content="2019-08-23T01:38:10.821Z">
+<meta property="og:updated_time" content="2019-08-26T10:38:12.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lord of SQL Injection Write Up No.10 Skeleton">
-<meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.">
+<meta name="twitter:title" content="Lord of SQL Injection Write Up No.12 Darkknight">
+<meta name="twitter:description" content="개요  SQL Injection에 대한 지식을 쌓기 위해 Lord of SQL Injection 사이트의 문제를 풀고 해답을 정리한다. 이 문서에서는 Lord of SQL Injection 12번 darkknight 문제에 대하여 정리한다.">
 <meta name="twitter:image" content="https://www.jslee.me/image/los-main.png">
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Lord of SQL Injection Write Up No.10 Skeleton | jslee's blog</title>
+  <title>Lord of SQL Injection Write Up No.12 Darkknight | jslee's blog</title>
   
 
 
@@ -406,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Lord of SQL Injection Write Up No.10 Skeleton
+          <h2 class="post-title" itemprop="name headline">Lord of SQL Injection Write Up No.12 Darkknight
 
               
             
@@ -432,13 +432,23 @@
                 
               
 
-              <time title="Post created: 2019-08-23 10:28:26 / Updated at: 10:38:10" itemprop="dateCreated datePublished" datetime="2019-08-23T10:28:26+09:00">2019-08-23</time>
+              <time title="Post created: 2019-08-23 10:28:26" itemprop="dateCreated datePublished" datetime="2019-08-23T10:28:26+09:00">2019-08-23</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-26 19:38:12" itemprop="dateModified" datetime="2019-08-26T19:38:12+09:00">2019-08-26</time>
+              </span>
             
           
 
@@ -504,7 +514,7 @@
         <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
 
 <p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
-<p>이 문서에서는 Lord of SQL Injection 10번 skeleton 문제에 대하여 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 12번 darkknight 문제에 대하여 정리한다.</p>
 <a id="more"></a>
 
 <h2 id="문제-분석"><a href="#문제-분석" class="headerlink" title="문제 분석"></a>문제 분석</h2><h3 id="문제-출제-의도"><a href="#문제-출제-의도" class="headerlink" title="문제 출제 의도"></a>문제 출제 의도</h3><p><code>&#39;</code>, <code>substr</code>, <code>ascii</code>, <code>=</code>을 대소문자 구분 없이 포함하지 않고 Blind SQL Injection을 하여 <code>pw</code>를 알아낼 수 있는지 확인한다.</p>
@@ -869,7 +879,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.73</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.74</div>
 
 
         
@@ -996,7 +1006,7 @@
   var disqus_config = function() {
     this.page.url = "https://www.jslee.me/2019/08/23/los-write-up-12-darkknight/";
     this.page.identifier = "2019/08/23/los-write-up-12-darkknight/";
-    this.page.title = 'Lord of SQL Injection Write Up No.10 Skeleton';
+    this.page.title = 'Lord of SQL Injection Write Up No.12 Darkknight';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
