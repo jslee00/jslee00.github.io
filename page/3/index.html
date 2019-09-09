@@ -386,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/03/install-docker-on-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/14/los-write-up-03-goblin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -406,7 +406,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/03/install-docker-on-centos/" class="post-title-link" itemprop="url">CentOS에 Docker 설치하기</a>
+                <a href="/2019/08/14/los-write-up-03-goblin/" class="post-title-link" itemprop="url">Lord of SQL Injection Write Up No.3 Goblin</a>
               
             
           </h2>
@@ -431,7 +431,7 @@
                 
               
 
-              <time title="Post created: 2019-08-03 13:26:42" itemprop="dateCreated datePublished" datetime="2019-08-03T13:26:42+09:00">2019-08-03</time>
+              <time title="Post created: 2019-08-14 21:34:04" itemprop="dateCreated datePublished" datetime="2019-08-14T21:34:04+09:00">2019-08-14</time>
             </span>
           
 
@@ -446,7 +446,1328 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-08-04 15:16:12" itemprop="dateModified" datetime="2019-08-04T15:16:12+09:00">2019-08-04</time>
+                <time title="Updated at: 2019-08-20 20:08:10" itemprop="dateModified" datetime="2019-08-20T20:08:10+09:00">2019-08-20</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Write-Up/" itemprop="url" rel="index"><span itemprop="name">Write Up</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/14/los-write-up-03-goblin/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/14/los-write-up-03-goblin/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
+
+<p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 3번 goblin 문제에 대하여 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/14/los-write-up-03-goblin/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/13/los-write-up-02-cobolt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/13/los-write-up-02-cobolt/" class="post-title-link" itemprop="url">Lord of SQL Injection Write Up No.2 Cobolt</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-13 20:47:11" itemprop="dateCreated datePublished" datetime="2019-08-13T20:47:11+09:00">2019-08-13</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-14 00:38:11" itemprop="dateModified" datetime="2019-08-14T00:38:11+09:00">2019-08-14</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Write-Up/" itemprop="url" rel="index"><span itemprop="name">Write Up</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/13/los-write-up-02-cobolt/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/13/los-write-up-02-cobolt/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
+
+<p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 2번 cobolt 문제에 대하여 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/13/los-write-up-02-cobolt/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/12/los-write-up-01-gremlin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/12/los-write-up-01-gremlin/" class="post-title-link" itemprop="url">Lord of SQL Injection Write Up No.1 Gremlin</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-12 11:24:33" itemprop="dateCreated datePublished" datetime="2019-08-12T11:24:33+09:00">2019-08-12</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-20 20:08:10" itemprop="dateModified" datetime="2019-08-20T20:08:10+09:00">2019-08-20</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Write-Up/" itemprop="url" rel="index"><span itemprop="name">Write Up</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/12/los-write-up-01-gremlin/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/12/los-write-up-01-gremlin/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/image/los-main.png" width="300">
+
+<p>SQL Injection에 대한 지식을 쌓기 위해 <a href="https://los.eagle-jump.org/" target="_blank" rel="noopener">Lord of SQL Injection 사이트</a>의 문제를 풀고 해답을 정리한다.</p>
+<p>이 문서에서는 Lord of SQL Injection 1번 gremlin 문제에 대하여 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/12/los-write-up-01-gremlin/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/11/install-zsh-on-ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/11/install-zsh-on-ubuntu/" class="post-title-link" itemprop="url">Ubuntu에 Zsh 구성하기</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-11 01:35:41 / Updated at: 01:53:10" itemprop="dateCreated datePublished" datetime="2019-08-11T01:35:41+09:00">2019-08-11</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/11/install-zsh-on-ubuntu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/11/install-zsh-on-ubuntu/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/11/install-zsh-on-ubuntu/terminal.svg" width="200">
+
+<p>개발 일을 하는 사람에게 뗄래야 뗄 수 없는 것이 바로 터미널 소프트웨어이다.<br>이왕 계속 보는 거 좀 이쁘면 기분이 좋지 않을까?</p>
+<p>나와 같은 생각을 했던 많은 개발자들이 탄탄대로를 만들어 놓았다.<br>이 문서에서는 Ubuntu 환경에 Zsh를 설치하고 구성하는 방법을 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/11/install-zsh-on-ubuntu/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/10/python-enum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/10/python-enum/" class="post-title-link" itemprop="url">Python Enum 클래스</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-10 20:35:38 / Updated at: 21:38:10" itemprop="dateCreated datePublished" datetime="2019-08-10T20:35:38+09:00">2019-08-10</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/프로그래밍/" itemprop="url" rel="index"><span itemprop="name">프로그래밍</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/10/python-enum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/10/python-enum/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>현실의 문제를 프로그래밍으로 다루려고 고민하다 보면 조건에 따른 분기를 어떻게 처리할 것인지에 대해 생각하게 된다.<br>이 때 단순하고 전통적인 방식으로 조건을 확인하고 맞으면 이거, 아니면 저거 식의 if-else문을 사용해도 되지만<br>더 나은 프로그래밍 방식에 대한 가치관을 세우고 객체지향, 함수형 등의 다양한 개념을 접하다 보면<br>사람에 따라, 상황에 따라 열거형 클래스 등을 이용해서 처리하기도 한다.</p>
+<p>Python에서는 3.4 버전부터 열거형 클래스인 Enum을 기본으로 탑재하였다.<br>이 문서에서는 이것을 사용하는 방법을 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/10/python-enum/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/09/install-mobaxterm-on-windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/09/install-mobaxterm-on-windows/" class="post-title-link" itemprop="url">Windows에 MobaXterm 설치하기</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-09 13:24:41" itemprop="dateCreated datePublished" datetime="2019-08-09T13:24:41+09:00">2019-08-09</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-11 01:53:10" itemprop="dateModified" datetime="2019-08-11T01:53:10+09:00">2019-08-11</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/09/install-mobaxterm-on-windows/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/09/install-mobaxterm-on-windows/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/09/install-mobaxterm-on-windows/mobaxterm-logo.jpg" width="200">
+
+<p>보통 컴퓨터 사면 게임도 해야 되고 인터넷 뱅킹도 해야 되고 하니 거의 무조건 Windows를 설치한다.<br>근데 소프트웨어를 구동하고 서비스하기 위한 서버에서는 서버 구축하기에 편하도록 리눅스를 사용하는 곳이 많다.<br>그리고 한 서버에 여러 명이 작업을 해야 하기 때문에 SSH라는 기술을 이용해서 원격으로 접속한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/09/install-mobaxterm-on-windows/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/08/ubuntu-on-wsl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/08/ubuntu-on-wsl/" class="post-title-link" itemprop="url">WSL 환경에 Ubuntu 설정하기</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-08 20:28:57" itemprop="dateCreated datePublished" datetime="2019-08-08T20:28:57+09:00">2019-08-08</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-09 13:38:12" itemprop="dateModified" datetime="2019-08-09T13:38:12+09:00">2019-08-09</time>
+              </span>
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/개발-환경-구축/" itemprop="url" rel="index"><span itemprop="name">개발 환경 구축</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/08/08/ubuntu-on-wsl/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/08/ubuntu-on-wsl/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/08/ubuntu-on-wsl/wsl-logo.png" width="200">
+
+<p>Windows 10 버전 1607 이상에서는 가상 머신이 없이도 Linux 환경에서 작업할 수 있다.<br>바로 Windows Subsystem for Linux, 줄여서 WSL이 있기 때문이다.</p>
+<p>이 글에서는 Windows Subsystem for Linux 환경을 이용하여 Windows를 사용하며 Ubuntu도 사용하는 방법을 정리한다.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/08/ubuntu-on-wsl/#more" rel="contents">
+                더 읽어보기 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/07/change-docker-data-dir/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaeseok Lee">
+      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
+      <meta itemprop="image" content="/images/avatar.heic">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jslee's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/07/change-docker-data-dir/" class="post-title-link" itemprop="url">Docker 데이터 디렉토리 변경</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">작성일</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2019-08-07 20:58:33" itemprop="dateCreated datePublished" datetime="2019-08-07T20:58:33+09:00">2019-08-07</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-08-11 01:50:12" itemprop="dateModified" datetime="2019-08-11T01:50:12+09:00">2019-08-11</time>
               </span>
             
           
@@ -478,8 +1799,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/03/install-docker-on-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/03/install-docker-on-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/07/change-docker-data-dir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/07/change-docker-data-dir/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -511,13 +1832,14 @@
 
       
         
-          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/03/install-docker-on-centos/docker-logo.png" width="250">
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/07/change-docker-data-dir/directory.svg" width="200">
 
-<p>CentOS에 Docker를 설치하는 방법을 정리한다.</p>
+<p>Docker는 기본적으로 <code>/var/lib/docker</code> 디렉토리에 Docker Image 등의 데이터를 저장한다.<br>이 상태로 두면 서버의 루트 용량이 적을 경우 Docker의 데이터로 인해 루트가 가득 차 각종 오류를 일으킬 수 있다.</p>
+<p>따라서 Docker 데이터 디렉토리를 큰 용량을 가진 별도의 디렉토리로 변경할 필요가 있다.<br>이 페이지에서는 <code>/home/docker</code> 디렉토리로 변경한다.</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/08/03/install-docker-on-centos/#more" rel="contents">
+              <a class="btn" href="/2019/08/07/change-docker-data-dir/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -577,7 +1899,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/02/install-centos/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/06/install-nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -597,7 +1919,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/02/install-centos/" class="post-title-link" itemprop="url">CentOS 설치하기</a>
+                <a href="/2019/08/06/install-nodejs/" class="post-title-link" itemprop="url">Node.js 설치하기</a>
               
             
           </h2>
@@ -622,23 +1944,13 @@
                 
               
 
-              <time title="Post created: 2019-08-02 04:43:35" itemprop="dateCreated datePublished" datetime="2019-08-02T04:43:35+09:00">2019-08-02</time>
+              <time title="Post created: 2019-08-06 20:21:42 / Updated at: 14:08:11" itemprop="dateCreated datePublished" datetime="2019-08-06T20:21:42+09:00">2019-08-06</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-08-04 14:15:25" itemprop="dateModified" datetime="2019-08-04T14:15:25+09:00">2019-08-04</time>
-              </span>
             
           
 
@@ -669,8 +1981,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/02/install-centos/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/02/install-centos/" itemprop="commentCount"></span>
+                <a href="/2019/08/06/install-nodejs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/06/install-nodejs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -702,13 +2014,14 @@
 
       
         
-          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/02/install-centos/centos-logo.png" width="200">
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/06/install-nodejs/nodejs-logo.svg" width="250">
 
-<p>운영체제 CentOS를 설치하는 방법을 정리한다.</p>
+<p><a href="https://github.com/nodesource/distributions/blob/master/README.md" target="_blank" rel="noopener">https://github.com/nodesource/distributions/blob/master/README.md</a></p>
+<p>위 페이지를 참고하여 Node.js를 설치하는 공식적인 방법을 정리한다.</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/08/02/install-centos/#more" rel="contents">
+              <a class="btn" href="/2019/08/06/install-nodejs/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -768,7 +2081,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/01/start-blog/">
+    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/05/run-kafka-with-docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaeseok Lee">
@@ -788,7 +2101,7 @@
           <h2 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/01/start-blog/" class="post-title-link" itemprop="url">블로그 시작!</a>
+                <a href="/2019/08/05/run-kafka-with-docker/" class="post-title-link" itemprop="url">Docker를 이용하여 Zookeeper와 Kafka 실행하기</a>
               
             
           </h2>
@@ -813,23 +2126,13 @@
                 
               
 
-              <time title="Post created: 2019-08-01 23:37:51" itemprop="dateCreated datePublished" datetime="2019-08-01T23:37:51+09:00">2019-08-01</time>
+              <time title="Post created: 2019-08-05 20:31:52 / Updated at: 23:08:10" itemprop="dateCreated datePublished" datetime="2019-08-05T20:31:52+09:00">2019-08-05</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Updated at: 2019-08-02 00:57:49" itemprop="dateModified" datetime="2019-08-02T00:57:49+09:00">2019-08-02</time>
-              </span>
             
           
 
@@ -842,7 +2145,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/잡담/" itemprop="url" rel="index"><span itemprop="name">잡담</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/시스템-구축/" itemprop="url" rel="index"><span itemprop="name">시스템 구축</span></a></span>
 
                 
                 
@@ -860,8 +2163,8 @@
                 </span>
             
                 <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/01/start-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/01/start-blog/" itemprop="commentCount"></span>
+                <a href="/2019/08/05/run-kafka-with-docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/05/run-kafka-with-docker/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -893,195 +2196,13 @@
 
       
         
-          <h2 id="블로그를-또-다시-만들다"><a href="#블로그를-또-다시-만들다" class="headerlink" title="블로그를 또 다시 만들다"></a>블로그를 또 다시 만들다</h2><blockquote>
-<p>항상 만들고 방치해서 잊혀진 나의 블로그들<br>이번에는 진짜 잘 해보자 ㅜㅜ</p>
-</blockquote>
-<p>블로그를 만들었다.</p>
-<p>잠자는 네이버 블로그와 NAS에서 죽은 워드프레스와<br>“이젠 정말 제대로 해보자!”며 만든 티스토리 블로그를 뒤로 하고…</p>
+          <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="/2019/08/05/run-kafka-with-docker/kafka-logo.png" width="200">
+
+<p>Docker를 이용하여 Kafka와 Zookeeper 서비스를 구동하는 방법을 정리한다.</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/08/01/start-blog/#more" rel="contents">
-                더 읽어보기 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jslee.me/2019/08/01/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jaeseok Lee">
-      <meta itemprop="description" content="정보보안 전문가를 꿈꾸는 20살 초보 개발자">
-      <meta itemprop="image" content="/images/avatar.heic">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="jslee's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">작성일</span>
-              
-
-              
-                
-              
-
-              <time title="Post created: 2019-08-01 00:00:00 / Updated at: 16:37:38" itemprop="dateCreated datePublished" datetime="2019-08-01T00:00:00+09:00">2019-08-01</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/잡담/" itemprop="url" rel="index"><span itemprop="name">잡담</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">댓글: </span>
-                <a href="/2019/08/01/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/01/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Hexo로-블로그-만들었다"><a href="#Hexo로-블로그-만들었다" class="headerlink" title="Hexo로 블로그 만들었다"></a>Hexo로 블로그 만들었다</h2><p>Hexo에서 자동으로 만들어 준 글이다.</p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/01/hello-world/#more" rel="contents">
+              <a class="btn" href="/2019/08/05/run-kafka-with-docker/#more" rel="contents">
                 더 읽어보기 &raquo;
               </a>
             </div>
@@ -1130,7 +2251,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -1174,7 +2295,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -1365,7 +2486,7 @@
 
 
 
-  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.74</div>
+  <div class="footer-custom">Icons made by Smashicons CC 3.0 BY<br>Hosted by <a href="https://github.com/jslee00/jslee00.github.io" class="theme-link" rel="noopener" target="_blank">GitHub Pages</a><br>jslee's blog v1.0.0.75</div>
 
 
         
