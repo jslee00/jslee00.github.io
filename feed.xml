@@ -5,9 +5,9 @@
   <subtitle>Develop, InfoSec &amp; Life</subtitle>
   <link href="/feed.xml" rel="self"/>
   
-  <link href="https://www.jslee.me/"/>
+  <link href="https://blog.jslee.me/"/>
   <updated>2019-09-17T06:08:17.184Z</updated>
-  <id>https://www.jslee.me/</id>
+  <id>https://blog.jslee.me/</id>
   
   <author>
     <name>Jaeseok Lee</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Lord of SQL Injection Write Up No.20 Dragon</title>
-    <link href="https://www.jslee.me/2019/09/15/los-write-up-20-dragon/"/>
-    <id>https://www.jslee.me/2019/09/15/los-write-up-20-dragon/</id>
+    <link href="https://blog.jslee.me/2019/09/15/los-write-up-20-dragon/"/>
+    <id>https://blog.jslee.me/2019/09/15/los-write-up-20-dragon/</id>
     <published>2019-09-15T11:45:46.000Z</published>
     <updated>2019-09-17T06:08:17.184Z</updated>
     
@@ -34,19 +34,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.19 Xavis</title>
-    <link href="https://www.jslee.me/2019/09/14/los-write-up-19-xavis/"/>
-    <id>https://www.jslee.me/2019/09/14/los-write-up-19-xavis/</id>
+    <link href="https://blog.jslee.me/2019/09/14/los-write-up-19-xavis/"/>
+    <id>https://blog.jslee.me/2019/09/14/los-write-up-19-xavis/</id>
     <published>2019-09-14T11:31:35.000Z</published>
     <updated>2019-09-17T06:08:17.184Z</updated>
     
@@ -61,19 +61,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.18 Nightmare</title>
-    <link href="https://www.jslee.me/2019/09/08/los-write-up-18-nightmare/"/>
-    <id>https://www.jslee.me/2019/09/08/los-write-up-18-nightmare/</id>
+    <link href="https://blog.jslee.me/2019/09/08/los-write-up-18-nightmare/"/>
+    <id>https://blog.jslee.me/2019/09/08/los-write-up-18-nightmare/</id>
     <published>2019-09-08T13:19:09.000Z</published>
     <updated>2019-09-17T06:08:17.184Z</updated>
     
@@ -88,19 +88,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.17 Succubus</title>
-    <link href="https://www.jslee.me/2019/09/07/los-write-up-17-succubus/"/>
-    <id>https://www.jslee.me/2019/09/07/los-write-up-17-succubus/</id>
+    <link href="https://blog.jslee.me/2019/09/07/los-write-up-17-succubus/"/>
+    <id>https://blog.jslee.me/2019/09/07/los-write-up-17-succubus/</id>
     <published>2019-09-07T12:58:07.000Z</published>
     <updated>2019-09-17T06:08:17.183Z</updated>
     
@@ -115,19 +115,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.16 Zombie Assassin</title>
-    <link href="https://www.jslee.me/2019/09/01/los-write-up-16-zombie-assassin/"/>
-    <id>https://www.jslee.me/2019/09/01/los-write-up-16-zombie-assassin/</id>
+    <link href="https://blog.jslee.me/2019/09/01/los-write-up-16-zombie-assassin/"/>
+    <id>https://blog.jslee.me/2019/09/01/los-write-up-16-zombie-assassin/</id>
     <published>2019-09-01T11:47:20.000Z</published>
     <updated>2019-09-17T06:08:17.183Z</updated>
     
@@ -142,19 +142,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.15 Assassin</title>
-    <link href="https://www.jslee.me/2019/08/31/los-write-up-15-assassin/"/>
-    <id>https://www.jslee.me/2019/08/31/los-write-up-15-assassin/</id>
+    <link href="https://blog.jslee.me/2019/08/31/los-write-up-15-assassin/"/>
+    <id>https://blog.jslee.me/2019/08/31/los-write-up-15-assassin/</id>
     <published>2019-08-31T11:34:41.000Z</published>
     <updated>2019-09-17T06:08:17.183Z</updated>
     
@@ -169,19 +169,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.14 Giant</title>
-    <link href="https://www.jslee.me/2019/08/25/los-write-up-14-giant/"/>
-    <id>https://www.jslee.me/2019/08/25/los-write-up-14-giant/</id>
+    <link href="https://blog.jslee.me/2019/08/25/los-write-up-14-giant/"/>
+    <id>https://blog.jslee.me/2019/08/25/los-write-up-14-giant/</id>
     <published>2019-08-25T14:19:56.000Z</published>
     <updated>2019-09-17T06:08:17.183Z</updated>
     
@@ -196,19 +196,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.13 Bugbear</title>
-    <link href="https://www.jslee.me/2019/08/24/los-write-up-13-bugbear/"/>
-    <id>https://www.jslee.me/2019/08/24/los-write-up-13-bugbear/</id>
+    <link href="https://blog.jslee.me/2019/08/24/los-write-up-13-bugbear/"/>
+    <id>https://blog.jslee.me/2019/08/24/los-write-up-13-bugbear/</id>
     <published>2019-08-23T16:53:32.000Z</published>
     <updated>2019-09-17T06:08:17.182Z</updated>
     
@@ -223,19 +223,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.12 Darkknight</title>
-    <link href="https://www.jslee.me/2019/08/23/los-write-up-12-darkknight/"/>
-    <id>https://www.jslee.me/2019/08/23/los-write-up-12-darkknight/</id>
+    <link href="https://blog.jslee.me/2019/08/23/los-write-up-12-darkknight/"/>
+    <id>https://blog.jslee.me/2019/08/23/los-write-up-12-darkknight/</id>
     <published>2019-08-23T01:28:26.000Z</published>
     <updated>2019-08-26T10:38:12.364Z</updated>
     
@@ -250,19 +250,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.11 Golem</title>
-    <link href="https://www.jslee.me/2019/08/22/los-write-up-11-golem/"/>
-    <id>https://www.jslee.me/2019/08/22/los-write-up-11-golem/</id>
+    <link href="https://blog.jslee.me/2019/08/22/los-write-up-11-golem/"/>
+    <id>https://blog.jslee.me/2019/08/22/los-write-up-11-golem/</id>
     <published>2019-08-22T12:16:21.000Z</published>
     <updated>2019-08-23T01:33:54.000Z</updated>
     
@@ -277,19 +277,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.10 Skeleton</title>
-    <link href="https://www.jslee.me/2019/08/21/los-write-up-10-skeleton/"/>
-    <id>https://www.jslee.me/2019/08/21/los-write-up-10-skeleton/</id>
+    <link href="https://blog.jslee.me/2019/08/21/los-write-up-10-skeleton/"/>
+    <id>https://blog.jslee.me/2019/08/21/los-write-up-10-skeleton/</id>
     <published>2019-08-21T14:35:49.000Z</published>
     <updated>2019-08-21T14:53:12.356Z</updated>
     
@@ -304,19 +304,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.9 Vampire</title>
-    <link href="https://www.jslee.me/2019/08/20/los-write-up-09-vampire/"/>
-    <id>https://www.jslee.me/2019/08/20/los-write-up-09-vampire/</id>
+    <link href="https://blog.jslee.me/2019/08/20/los-write-up-09-vampire/"/>
+    <id>https://blog.jslee.me/2019/08/20/los-write-up-09-vampire/</id>
     <published>2019-08-20T10:48:27.000Z</published>
     <updated>2019-08-20T11:08:10.063Z</updated>
     
@@ -331,19 +331,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.8 Troll</title>
-    <link href="https://www.jslee.me/2019/08/19/los-write-up-08-troll/"/>
-    <id>https://www.jslee.me/2019/08/19/los-write-up-08-troll/</id>
+    <link href="https://blog.jslee.me/2019/08/19/los-write-up-08-troll/"/>
+    <id>https://blog.jslee.me/2019/08/19/los-write-up-08-troll/</id>
     <published>2019-08-19T11:21:10.000Z</published>
     <updated>2019-08-20T11:08:10.063Z</updated>
     
@@ -358,19 +358,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.7 Orge</title>
-    <link href="https://www.jslee.me/2019/08/18/los-write-up-07-orge/"/>
-    <id>https://www.jslee.me/2019/08/18/los-write-up-07-orge/</id>
+    <link href="https://blog.jslee.me/2019/08/18/los-write-up-07-orge/"/>
+    <id>https://blog.jslee.me/2019/08/18/los-write-up-07-orge/</id>
     <published>2019-08-17T17:10:31.000Z</published>
     <updated>2019-08-20T11:08:10.063Z</updated>
     
@@ -385,19 +385,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.6 Darkelf</title>
-    <link href="https://www.jslee.me/2019/08/17/los-write-up-06-darkelf/"/>
-    <id>https://www.jslee.me/2019/08/17/los-write-up-06-darkelf/</id>
+    <link href="https://blog.jslee.me/2019/08/17/los-write-up-06-darkelf/"/>
+    <id>https://blog.jslee.me/2019/08/17/los-write-up-06-darkelf/</id>
     <published>2019-08-17T13:42:40.000Z</published>
     <updated>2019-08-20T11:08:10.062Z</updated>
     
@@ -412,19 +412,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.5 Wolfman</title>
-    <link href="https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/"/>
-    <id>https://www.jslee.me/2019/08/16/los-write-up-05-wolfman/</id>
+    <link href="https://blog.jslee.me/2019/08/16/los-write-up-05-wolfman/"/>
+    <id>https://blog.jslee.me/2019/08/16/los-write-up-05-wolfman/</id>
     <published>2019-08-16T05:19:32.000Z</published>
     <updated>2019-08-20T11:08:10.032Z</updated>
     
@@ -439,19 +439,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.4 Orc</title>
-    <link href="https://www.jslee.me/2019/08/15/los-write-up-04-orc/"/>
-    <id>https://www.jslee.me/2019/08/15/los-write-up-04-orc/</id>
+    <link href="https://blog.jslee.me/2019/08/15/los-write-up-04-orc/"/>
+    <id>https://blog.jslee.me/2019/08/15/los-write-up-04-orc/</id>
     <published>2019-08-15T02:23:17.000Z</published>
     <updated>2019-08-20T11:08:10.031Z</updated>
     
@@ -466,19 +466,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.3 Goblin</title>
-    <link href="https://www.jslee.me/2019/08/14/los-write-up-03-goblin/"/>
-    <id>https://www.jslee.me/2019/08/14/los-write-up-03-goblin/</id>
+    <link href="https://blog.jslee.me/2019/08/14/los-write-up-03-goblin/"/>
+    <id>https://blog.jslee.me/2019/08/14/los-write-up-03-goblin/</id>
     <published>2019-08-14T12:34:04.000Z</published>
     <updated>2019-08-20T11:08:10.031Z</updated>
     
@@ -493,19 +493,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.2 Cobolt</title>
-    <link href="https://www.jslee.me/2019/08/13/los-write-up-02-cobolt/"/>
-    <id>https://www.jslee.me/2019/08/13/los-write-up-02-cobolt/</id>
+    <link href="https://blog.jslee.me/2019/08/13/los-write-up-02-cobolt/"/>
+    <id>https://blog.jslee.me/2019/08/13/los-write-up-02-cobolt/</id>
     <published>2019-08-13T11:47:11.000Z</published>
     <updated>2019-08-13T15:38:11.373Z</updated>
     
@@ -520,19 +520,19 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
   <entry>
     <title>Lord of SQL Injection Write Up No.1 Gremlin</title>
-    <link href="https://www.jslee.me/2019/08/12/los-write-up-01-gremlin/"/>
-    <id>https://www.jslee.me/2019/08/12/los-write-up-01-gremlin/</id>
+    <link href="https://blog.jslee.me/2019/08/12/los-write-up-01-gremlin/"/>
+    <id>https://blog.jslee.me/2019/08/12/los-write-up-01-gremlin/</id>
     <published>2019-08-12T02:24:33.000Z</published>
     <updated>2019-08-20T11:08:10.031Z</updated>
     
@@ -547,12 +547,12 @@
     
     </summary>
     
-      <category term="Write Up" scheme="https://www.jslee.me/categories/Write-Up/"/>
+      <category term="Write Up" scheme="https://blog.jslee.me/categories/Write-Up/"/>
     
     
-      <category term="Lord of SQL Injection" scheme="https://www.jslee.me/tags/Lord-of-SQL-Injection/"/>
+      <category term="Lord of SQL Injection" scheme="https://blog.jslee.me/tags/Lord-of-SQL-Injection/"/>
     
-      <category term="Infosec" scheme="https://www.jslee.me/tags/Infosec/"/>
+      <category term="Infosec" scheme="https://blog.jslee.me/tags/Infosec/"/>
     
   </entry>
   
